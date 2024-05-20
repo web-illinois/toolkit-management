@@ -21,7 +21,7 @@ This repository will have two Github Actions.
 
 #### HTML Header Must Contain
 * Brand CSS (https://cdn.brand.illinois.edu/illinois.css) 
-* Global WIGG CSS (in this repository)
+* Global WIGG CSS (in this repository, TODO needs to be added)
 
 ### README.md file
 Use the [sample README.md file in the samples folder](https://github.com/web-illinois/toolkit-management/blob/main/samples/README.md).
