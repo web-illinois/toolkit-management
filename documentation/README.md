@@ -118,7 +118,9 @@ Bad:
 * Consider building the theme, width, and spacing attribute in the component. For the width component, this is only meant to allow the user to choose to “break” the margins and go full width. Under normal circumstances, a component should grow to fill the container.
 * Consider how the end user may use or expand this component. Because of this, you may want favor slots over attributes if the attributes are writing HTML in the component, and favor CSS styles over attributes if the attributes are changing styles of the HTML inside the component. 
 * When handling state of the component, consider triggering this via a watched reactive property (https://lit.dev/docs/components/properties/). 
-* When handling state between multiple components, consider using an event and event listener (https://lit.dev/docs/components/events/). 
+* When handling state between multiple components, consider using an event and event listener (https://lit.dev/docs/components/events/).
+* Watch out for overcomplicating a component. If you are changing HTML render based on component size or other pieces, you may need to break down the component into multiple components.
+* Consider having many small files that are called by the main file. Having a *component*.styles.js and *component*.component.js allows future editors to quickly find what they are looking for. 
 * Be aware of if a developer may need to change a CSS value. When this is the case, use CSS variables to allow advanced users to update web component information. When possible, reference the CSS global variables in the brand CSS or WIGG CSS.
 
 Good:
