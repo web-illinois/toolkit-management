@@ -54,9 +54,13 @@ Contact jonker@illinois.edu to be added to the NPM group.
 
 ## Toolkit Rollup
 Part of this process is to take components in individual repositories and build a global “toolkit.js” and “toolkit.css” file to allow users to easily get a complete list of components and global helper files. This github repository is responsible for that rollup. 
+
 This is currently limited to WIGG repositories, but we are open to adding additional components provided they have an NPM package or some other automated process to get files. 
+
 Because the toolkit already has a version 1 and 2, we are starting with version 3.0.0.
+
 The toolkit rollup process will generate two packages: a major version and minor version. The major version will contain the latest minor version of each package listed (in NPM parlance, version 3 will have 1.x.x of every component). The minor version will have the latest patch version of each package listed (in NPM parlance, version 3 will have 1.0.x of each component). These will be stored in https://cdn.toolkit.illinois.edu/major/file and https://cdn.toolkit.illinois.edu/major.minor/file 
+
 The WIGG web components team will meet monthly to:
 * Add new components.
 * Upgrade existing components to minor versions.
@@ -64,6 +68,7 @@ The WIGG web components team will meet monthly to:
 * Review the Global WIGG CSS.
 
 Note that if a component upgrades to a major version and this upgrade is added to the web toolkit, this requires a major version change from the toolkit. This will be done sparingly and be grouped. To allow this component to be used in conjunction with the toolkit, you may temporarily switch your component to ilw-alt. 
+
 New components will trigger a minor release. 
 
 ## Standards and Best Practices
