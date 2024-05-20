@@ -3,7 +3,7 @@
 This is a guideline for developers to create new components for the Toolkit. 
 
 ## Creating a new repository
-Create a new repository. It should have a topic of "illinois-toolkit" and be a self-contained repository. 
+Create a new repository. It should have a topic of "illinois-toolkit" and be a self-contained repository. It should only have one component, with the exception if there are secondary components that are only used in the main component. 
 
 It should have the following branches: 
 * **main**: the main branch, production. This should be the default branch.
@@ -24,10 +24,12 @@ This repository will have two Github Actions.
 * Global WIGG CSS (in this repository)
 
 ### README.md file
-Use the sample README.md file in the samples folder (TODO: still under construction)
+Use the [sample README.md file in the samples folder](https://github.com/web-illinois/toolkit-management/blob/main/samples/README.md).
 
 ### JSON documentation for builder
-Create a JSON document that allows automated documentation through the toolkit builder. Use the sample builder.json file in the samples folder (TODO: still under construction)
+Create a JSON document that allows automated documentation through the toolkit builder. Use the [sample builder.json file in the samples folder](https://github.com/web-illinois/toolkit-management/blob/main/samples/builder.json).
+
+You may create more than one json file if the component has multiple uses (for example, a "Section" component may have a quote version, an introduction version, and a generic version -- because they look very different, you may have more than one json file for a component.
 
 ## Naming Conventions
 * **ilw-**: the WIGG web component, and CSS constants used by WIGG
