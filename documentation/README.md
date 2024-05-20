@@ -13,6 +13,8 @@ This repository will have two Github Actions.
 * **deploy_minor.yml**: this will deploy the minor and patch version to the toolkit CDN under their component information (this will be triggered when adding a release).
 * **deploy_major.yml**: this will deploy the major version to the toolkit CDN (this will be triggered when pushing to main or a workflow_dispatch).
 
+TODO need to create samples of these yml files.
+
 ### Suggested Toolset
 * **Lit** (https://lit.dev/) for web components.
 * **Vite** (https://vitejs.dev/) used to create a dev server and create build artifacts.
