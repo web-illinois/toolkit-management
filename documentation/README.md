@@ -75,7 +75,7 @@ New components will trigger a minor release.
 Note that these best practices are descriptive, not prescriptive. 
 * Discuss any new components with the WIGG web components team before designing to see if another component can fill its role with minor changes. 
 * Before coding, review WCAG to ensure you are aware of accessibility issues and create a few “how would I use this” examples using HTML. Both are in the README.md file. 
-* Ensure your components are semantically correct. This means adding semantic roles or HTML5 tags around them, and not splitting out semantic terms between components.
+* Ensure your components are semantically correct. This means adding semantic roles or HTML5 tags within the component and not requiring the user to add semantic tags, and not splitting out semantic terms between components.
 
 Good:
 ```` 
