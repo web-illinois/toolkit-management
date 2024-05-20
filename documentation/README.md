@@ -35,8 +35,10 @@ You may create more than one json file if the component has multiple uses (for e
 * **ilw-**: the WIGG web component, and CSS constants used by WIGG
 * **ilw-alt-**: an alternate version of the web component and CSS constants, used for release conflicts
 
+For CSS variables, use the "--" technique to divide major components. Example: *--ilw-header--font-weight*
+
 ## Version Information
-Following the process at https://semver.org/. 
+Following the process at https://semver.org/. Quoting from them: 
 * MAJOR version when you make incompatible API changes
 * MINOR version when you add functionality in a backward compatible manner
 * PATCH version when you make backward compatible bug fixes
