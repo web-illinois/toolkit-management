@@ -140,4 +140,4 @@ ilw-hero div.background { background: var(--il-blue); }
 * **Size:** xx-small, x-small, small, medium, large, x-large, xx-large
 * **Width** (how wide a component will be): full, auto
 * **Spacing** (what top/bottom padding the component will have): auto, none
-* **Align** (where an item goes in a space): left, center, right, top, bottom, top-left, top-right, center-left, center-right, bottom-left, bottom-right
+* **Align** (where an item goes in a space): left, center, right, top, bottom, top-left, top-right, bottom-left, bottom-right
