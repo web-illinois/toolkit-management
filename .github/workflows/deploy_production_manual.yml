@@ -16,6 +16,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@v4
     - name: Get version from input
       run: echo "VERSION=${GITHUB_BRANCH}" >> $GITHUB_ENV
       env: 
