@@ -7,13 +7,21 @@ Create a new repository. It should have a topic of "illinois-toolkit" and be a s
 
 It should have the following branches: 
 * **main**: the main branch, production. This should be the default branch.
-* **release/x.x**: this is the minor branch release for this component.
+* **release/x.x**: this is the minor branch releases for this component.
 
-This repository will have two Github Actions. 
-* **deploy_minor.yml**: this will deploy the minor and patch version to the toolkit CDN under their component information (this will be triggered when adding a release).
-* **deploy_major.yml**: this will deploy the major version to the toolkit CDN (this will be triggered when pushing to main or a workflow_dispatch).
+This repository should have four Github Actions. 
+* **deploy_production.yml**: this will deploy the major, minor and patch version to the toolkit CDN (this will be triggered when adding a release and is based on the tag name associated with the release).
+* **deploy_production_manual.yml**: this will deploy the major, minor and patch version to the toolkit CDN (this can be manually triggered).
+* **deploy_development.yml**: this will deploy a development branch to the dev.toolkit.illinois.edu site (this can be manually triggered).
+* **delete_development.yml**: this will delete all development areas from the dev.toolkit.illinois.edu site (this can be manually triggered).
 
-TODO need to create samples of these yml files.
+Patch releases should not be overwritten -- the only time that the *deploy_production_manual.yml* action should be triggered is if there is a problem with the *deploy_production.yml* deploy, and even then, the preference is to re-run the failed action. 
+
+Currently, the NPM publish process is not included in the default Github actions, but you may add them if you want.
+
+To deploy your application, merge to main, then mark it as a release. The deploy_production action should deploy your code automatically. Then merge it to the release branch. 
+
+See the [workflows in this repository for examples](https://github.com/web-illinois/toolkit-management/tree/main/.github/workflows).
 
 ### Suggested Toolset
 * **Lit** (https://lit.dev/) for web components.
@@ -52,7 +60,7 @@ You may publish your package to the NPM team illinois-toolkit (https://www.npmjs
 ### To publish: 
 ``` npm publish --access public ```
 
-Contact jonker@illinois.edu to be added to the NPM group. 
+Contact jonker@illinois.edu to be added to the NPM group.  
 
 ## Toolkit Rollup
 Part of this process is to take components in individual repositories and build a global “toolkit.js” and “toolkit.css” file to allow users to easily get a complete list of components and global helper files. This github repository is responsible for that rollup. 
@@ -69,9 +77,11 @@ The WIGG web components team will meet monthly to:
 * Plan for existing components to be upgraded to major versions (see note below).
 * Review the Global WIGG CSS.
 
-Note that if a component upgrades to a major version and this upgrade is added to the web toolkit, this requires a major version change from the toolkit. This will be done sparingly and be grouped. To allow this component to be used in conjunction with the toolkit, you may temporarily switch your component to ilw-alt. 
+Note that if a component upgrades to a major version and this upgrade is added to the web toolkit, this requires a major version change from the toolkit. This will be done sparingly and be grouped. To allow this component to be used in conjunction with the toolkit, you may temporarily switch your component to the *ilw-alt-* namespace. 
 
-New components will trigger a minor release. 
+New components will **not** trigger a major release. Because of this, if you have a component that is not officially in the toolkit, you should avoid using the *ilw-* namespace to avoid conflicts. You may use the *ilw-alt-* namespace for this case if you want. 
+
+TODO Create the rollup process
 
 ## Standards and Best Practices
 Note that these best practices are descriptive, not prescriptive. 

@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Test Styles</title>
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="src/size.css">
+    </link>
+    <link rel="stylesheet" href="src/buttons.css">
+    </link>
+    <link rel="stylesheet" href="src/size.css">
+    </link>
+    <style>
+        .blue {
+            background: var(--il-blue);
+            color: white;
+            height: 40px;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test Styles</h1>
+    <ul class="ilw-buttons">
+        <li><a href="#">Test Link 1</a></li>
+        <li><a href="#" class="ilw-theme-orange">Test Link 2</a></li>
+        <li><a href="#" class="ilw-theme-white">Test Link 3</a></li>
+        <li><a href="#" class="ilw-theme-white-orange">Test Link 4</a></li>
+    </ul>
+    <ul class="ilw-buttons ilw-width-full">
+        <li><a href="#">Test Link 1</a></li>
+        <li><a href="#" class="ilw-theme-orange">Test Link 2</a></li>
+        <li><a href="#" class="ilw-theme-white">Test Link 3</a></li>
+        <li><a href="#" class="ilw-theme-white-orange">Test Link 4</a></li>
+    </ul>
+    <ul class="ilw-buttons" style="max-width: 400px;">
+        <li><a href="#">Test Link 1</a></li>
+        <li><a href="#" class="ilw-theme-orange">Test Link With Long Text 2</a></li>
+        <li><a href="#" class="ilw-theme-white">Test Link 3</a></li>
+        <li><a href="#" class="ilw-theme-white-orange">Test Link 4</a></li>
+    </ul>
+    <div>
+        <a href="#" class="ilw-button">Test Link 5</a>
+    </div>
+    <div>
+        <a href="#" class="ilw-button ilw-width-full">Test Link 6</a>
+    </div>
+    <div>
+        <a href="#" class="ilw-button ilw-width-half">Test Link 7</a>
+    </div>
+    <div>
+        <a href="#" class="ilw-button ilw-size-large">Test Link 8</a>
+    </div>
+
+    <div style="max-width: 1000px; margin: 20px auto;">
+        <div class="blue">Test information</div>
+    </div>
+
+    <div style="max-width: 1000px; margin: 20px auto;">
+        <div class="blue ilw-width-full">Test information</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "@illinois-toolkit/toolkit-management",
+  "version": "3.0.0-alpha",
+  "description": "Global CSS and JS for toolkit",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run css-minify && npm run concat",
+    "css-minify": "css-minify -d global-css/src/ -o dist",
+    "concat": "concat -o dist/ilw-global.css dist/buttons.min.css dist/size.min.css dist/screen-reader.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-illinois/toolkit-management.git"
+  },
+  "author": "WIGG Web Components",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-illinois/toolkit-management/issues"
+  },
+  "homepage": "https://github.com/web-illinois/toolkit-management#readme",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "css-minify": "^2.0.0",
+    "vite": "^5.2.0"
+  }
+}

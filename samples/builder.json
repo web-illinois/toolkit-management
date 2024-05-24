@@ -7,7 +7,7 @@
     "use-preview": true,
     "open-new-window": false,
     "toolkit-version": "1.0",
-    "versions" [ 
+    "versions": [ 
     {
         "version": "1.0",
         "date": "5/20/2024",
@@ -17,8 +17,8 @@
                "name": "default",
                "text": "<h3>Sample heading</h3><p>Sample text</p>",
                "parent-element": "div",
-               "parent-style": "width: 400px;",
-           },
+               "parent-style": "width: 400px;"
+           } ],
         "attributes" : [
            {
                "name": "alwayson",
@@ -67,5 +67,6 @@
                 "description" : "CSS value for font weight"
             }
         ]
+    }
     ]
 }
