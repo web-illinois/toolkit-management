@@ -1,0 +1,66 @@
+{
+	"title": "Global Button Styles (button)",
+    "tag": "ilw-global-button-button",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "button",
+    "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'button' element.",
+	"version": "3.0.0-alpha",
+	"date": "5/28/2024",
+	"css": "",
+	"js": "",
+	"production": false,
+    "notes": "",
+	"parent-style": "text-align: center;",
+	"samples": [
+		{
+			"name": "default",
+			"description": "Single button",
+			"text": "Link 1"
+		}
+	],
+	"attributes-fixed": [],
+	"attributes-text": [],
+	"attributes": [],
+	"classes-fixed": [
+		{
+			"name": "ilw-button",
+			"description": "Button group class",
+			"depreciated": false,
+			"value": "ilw-button"
+		}
+	],
+	"classes": [
+		{
+			"name": "theme",
+			"description": "Color theme used",
+			"depreciated": false,
+			"values": [
+				"",
+				"ilw-theme-blue",
+				"ilw-theme-orange",
+				"ilw-theme-white",
+				"ilw-theme-white-orange"
+			]
+		},
+		{
+			"name": "width",
+			"description": "Width of buttons",
+			"depreciated": false,
+			"values": [
+				"",
+				"ilw-width-full"
+			]
+		},
+		{
+			"name": "size",
+			"description": "Size of buttons",
+			"depreciated": false,
+			"values": [
+				"",
+				"ilw-size-large"
+			]
+		}
+	],
+	"css-variables": []
+}

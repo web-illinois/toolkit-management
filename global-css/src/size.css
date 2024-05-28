@@ -36,17 +36,8 @@
     }
 }
 
-.ilw-width-half, .ilw-button.ilw-width-half {
-    position: initial;
-    display: block;
-    max-width: 50%;
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .ilw-size-large, .ilw-button.ilw-size-large {
     font-size: 2rem;
     line-height: 2.5rem;
     padding: 20px 40px;
 }
-

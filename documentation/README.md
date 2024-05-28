@@ -7,7 +7,7 @@ Create a new repository. It should have a topic of "illinois-toolkit" and be a s
 
 It should have the following branches: 
 * **main**: the main branch, production. This should be the default branch.
-* **release/x.x**: this is the minor branch releases for this component.
+* **release/x.x**: this is the minor production branch releases for this component.
 
 This repository should have four Github Actions. 
 * **deploy_production.yml**: this will deploy the major, minor and patch version to the toolkit CDN (this will be triggered when adding a release and is based on the tag name associated with the release).
@@ -21,7 +21,9 @@ Currently, the NPM publish process is not included in the default Github actions
 
 To deploy your application, merge to main, then mark it as a release. The deploy_production action should deploy your code automatically. Then merge it to the release branch. 
 
-See the [workflows in this repository for examples](https://github.com/web-illinois/toolkit-management/tree/main/.github/workflows).
+If you are updating an old release (for example, main is on 3.3.1 and you need to make a patch release to 3.1), merge to the proper release branch, and then mark it as an old patch release. 
+
+See the [workflows in this repository to set up your repository](https://github.com/web-illinois/toolkit-management/tree/main/.github/workflows).
 
 ### Suggested Toolset
 * **Lit** (https://lit.dev/) for web components.
@@ -31,15 +33,17 @@ See the [workflows in this repository for examples](https://github.com/web-illin
 
 #### HTML Header Must Contain
 * Brand CSS (https://cdn.brand.illinois.edu/illinois.css) 
-* Global WIGG CSS (in this repository, TODO needs to be added)
+* Global WIGG CSS (in this repository)
 
 ### README.md file
 Use the [sample README.md file in the samples folder](https://github.com/web-illinois/toolkit-management/blob/main/samples/README.md).
 
 ### JSON documentation for builder
-Create a JSON document that allows automated documentation through the toolkit builder. Use the [sample builder.json file in the samples folder](https://github.com/web-illinois/toolkit-management/blob/main/samples/builder.json).
+Create a JSON document that allows automated documentation through the toolkit builder. Use the [sample files in the global-css folder](https://github.com/web-illinois/toolkit-management/blob/main/global-css/builder). 
 
 You may create more than one json file if the component has multiple uses (for example, a "Section" component may have a quote version, an introduction version, and a generic version -- because they look very different, you may have more than one json file for a component.
+
+Because each json file is associated with a release, you will have mutiple json files. 
 
 ## Naming Conventions
 * **ilw-**: the WIGG web component, and CSS constants used by WIGG

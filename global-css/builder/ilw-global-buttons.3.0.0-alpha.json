@@ -1,0 +1,53 @@
+{
+	"title": "Global Button Group Styles",
+    "tag": "ilw-global-buttons",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "ul",
+    "description": "The Global WIGG Stylesheet contains a group of buttons.",
+	"version": "3.0.0-alpha",
+	"date": "5/28/2024",
+	"css": "",
+	"js": "",
+	"production": false,
+    "notes": "",
+	"parent-style": "",
+	"samples": [
+		{
+			"name": "default",
+			"description": "Group of buttons",
+			"text": "<li><a href='#'>Link 1</a></li><li><a href='#'>Link 2</a></li><li><a href='#'>Link 3</a></li>"
+		},
+		{
+			"name": "buttons",
+			"description": "Group of actual buttons",
+			"text": "<li><button>Link 1</button></li><li><button>Link 2</button></li><li><button>Link 3</button></li>"
+		}
+	],
+	"attributes-fixed": [],
+	"attributes-text": [],
+	"attributes": [],
+	"classes-fixed": [
+		{
+			"name": "ilw-buttons",
+			"description": "Button group class",
+			"depreciated": false,
+			"value": "ilw-buttons"
+		}
+	],
+	"classes": [
+		{
+			"name": "theme",
+			"description": "Color theme used",
+			"depreciated": false,
+			"values": [
+				"",
+				"ilw-theme-blue",
+				"ilw-theme-orange",
+				"ilw-theme-white",
+				"ilw-theme-white-orange"
+			]
+		}
+	],
+	"css-variables": []
+}
