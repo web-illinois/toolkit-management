@@ -1,0 +1,12 @@
+{
+	"title": "Global Screen Reader",
+    "tag": "ilw-global-sr-only",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains styles to make an item visible for a screen reader but not displayed.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+
+}

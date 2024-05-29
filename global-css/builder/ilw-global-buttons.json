@@ -1,0 +1,11 @@
+{
+    "title": "Global Button Group Styles",
+    "tag": "ilw-global-buttons",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains buttons.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Global Button Styles (anchor)",
+    "tag": "ilw-global-button-anchor",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "a",
+    "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'a' element.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+}
