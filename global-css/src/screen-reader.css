@@ -1,12 +1,11 @@
 .ilw-sr-only {
-    position: absolute !important;
-    left: -9999px !important;
-    top: auto !important;
-    display: block !important;
-    text-align: left !important;
-    text-indent: -9999em !important;
-    width: 1px !important;
-    height: 1px !important;
-    overflow: hidden !important;
-  }
+  position: absolute !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+}
   
