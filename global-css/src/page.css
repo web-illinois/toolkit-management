@@ -1,0 +1,11 @@
+:root {
+    --ilw-background--color: white;
+    --ilw-heading--color: var(--il-blue);
+    --ilw-link--outline-focus: 2px dotted;
+    --ilw-link--color: var(--il-blue);
+    --ilw-link--color-focus: var(--il-blue);
+    --ilw-link--color-visited: var(--il-blue);
+    --ilw-panel--color: white;
+    --ilw-panel--color-highlighted: white;
+    --ilw-panel--color-focus: white;
+}
