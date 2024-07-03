@@ -10,7 +10,7 @@
 	"css": "",
 	"js": "",
 	"production": false,
-    "notes": "",
+    "notes": "You won't see anything because the purpose of this is to not be displayed on the screen.",
 	"parent-style": "text-align: center;",
 	"samples": [
 		{

@@ -3,7 +3,9 @@
 This is a guideline for developers to create new components for the Toolkit. 
 
 ## Creating a new repository
-Create a new repository. It should have a topic of "illinois-toolkit" and be a self-contained repository. It should only have one component, with the exception if there are secondary components that are only used in the main component. 
+Create a new repository. It should have a topic of "illinois-toolkit" and be a self-contained repository. 
+
+It should only have one component, with the exception if there are secondary components that are only used in the main component. 
 
 It should have the following branches: 
 * **main**: the main branch, production. This should be the default branch.
@@ -41,7 +43,7 @@ Use the [sample README.md file in the samples folder](https://github.com/web-ill
 ### JSON documentation for builder
 Create a JSON document that allows automated documentation through the toolkit builder. Use the [sample files in the global-css folder](https://github.com/web-illinois/toolkit-management/blob/main/global-css/builder). 
 
-You may create more than one json file if the component has multiple uses (for example, a "Section" component may have a quote version, an introduction version, and a generic version -- because they look very different, you may have more than one json file for a component.
+You may create more than one json file if the component has multiple uses (for example, a "Section" component may have a quote version, an introduction version, and a generic version). Because they look very different, you may have more than one json file for a component.
 
 Because each json file is associated with a release, you will have mutiple json files. 
 
@@ -49,7 +51,7 @@ Because each json file is associated with a release, you will have mutiple json 
 * **ilw-**: the WIGG web component, and CSS constants used by WIGG
 * **ilw-alt-**: an alternate version of the web component and CSS constants, used for release conflicts
 
-For CSS variables, use the "--" technique to divide major components. Example: *--ilw-header--font-weight*
+For CSS variables, use the "--" technique to divide major components. Example: *--ilw-header--font-weight*. Place the state before the name (so *--ilw-header--focused-button-color* is better than *--ilw-header--button-color-focus*).
 
 ## Version Information
 Following the process at https://semver.org/. Quoting from them: 
@@ -64,7 +66,7 @@ You may publish your package to the NPM team illinois-toolkit (https://www.npmjs
 ### To publish: 
 ``` npm publish --access public ```
 
-Contact jonker@illinois.edu to be added to the NPM group.  
+Contact jonker@illinois.edu to be added to the NPM group.  More information about the integration plans is at the [Integration Documentation](https://github.com/web-illinois/toolkit-management/blob/main/documentation/INTEGRATION.md).
 
 ## Toolkit Rollup
 Part of this process is to take components in individual repositories and build a global “toolkit.js” and “toolkit.css” file to allow users to easily get a complete list of components and global helper files. This github repository is responsible for that rollup. 
@@ -84,8 +86,6 @@ The WIGG web components team will meet monthly to:
 Note that if a component upgrades to a major version and this upgrade is added to the web toolkit, this requires a major version change from the toolkit. This will be done sparingly and be grouped. To allow this component to be used in conjunction with the toolkit, you may temporarily switch your component to the *ilw-alt-* namespace. 
 
 New components will **not** trigger a major release. Because of this, if you have a component that is not officially in the toolkit, you should avoid using the *ilw-* namespace to avoid conflicts. You may use the *ilw-alt-* namespace for this case if you want. 
-
-TODO Create the rollup process
 
 ## Standards and Best Practices
 Note that these best practices are descriptive, not prescriptive. 
@@ -126,10 +126,11 @@ Bad:
 ````
 
 * Components should not make web calls to services. Instead, create a helper class that connects the web service to the component. 
+* Use existing attribute names and standard CSS patterns when possible. 
 * Use container queries when possible (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) 
 * Be aware of the distinction between em, rem, vw/vh, cqw/cqh, cqi, and cqb. Ensure that the use of absolute or fixed size doesn’t interfere with accessibility requirements. 
-* Be aware that different heading types may be used in a component, so ensure that your style is set no matter which heading is used (from h2 – h6). 
-* Consider building the theme, width, and spacing attribute in the component. For the width component, this is only meant to allow the user to choose to “break” the margins and go full width. Under normal circumstances, a component should grow to fill the container.
+* Be aware that different heading types may be used in a component, so ensure that your style is set no matter which heading is used (from h2 – h6). You may assume that the h1 header is only used for page titles. 
+* Consider building the theme and width attribute in the component. For the width component, this is only meant to allow the user to choose to “break” the margins and go full width. Under normal circumstances, a component should grow to fill the container.
 * Consider how the end user may use or expand this component. Because of this, you may want favor slots over attributes if the attributes are writing HTML in the component, and favor CSS styles over attributes if the attributes are changing styles of the HTML inside the component. 
 * When handling state of the component, consider triggering this via a watched reactive property (https://lit.dev/docs/components/properties/). 
 * When handling state between multiple components, consider using an event and event listener (https://lit.dev/docs/components/events/).
@@ -153,5 +154,5 @@ ilw-hero div.background { background: var(--il-blue); }
 * **Theme:** blue, orange, white, gray, blue-gradient, orange-gradient
 * **Size:** xx-small, x-small, small, medium, large, x-large, xx-large
 * **Width** (how wide a component will be): full, auto
-* **Spacing** (what top/bottom padding the component will have): auto, none
 * **Align** (where an item goes in a space): left, center, right, top, bottom, top-left, top-right, bottom-left, bottom-right
+* **Padding** (padding around the item): should use the standard length / percentage CSS. 

@@ -1,11 +1,96 @@
-:root {
-    --ilw-background--color: white;
-    --ilw-heading--color: var(--il-blue);
-    --ilw-link--outline-focus: 2px dotted;
-    --ilw-link--color: var(--il-blue);
-    --ilw-link--color-focus: var(--il-blue);
-    --ilw-link--color-visited: var(--il-blue);
-    --ilw-panel--color: white;
-    --ilw-panel--color-highlighted: white;
-    --ilw-panel--color-focus: white;
+ilw-page[illinois] p, ilw-content p, ilw-page[illinois] caption, ilw-content caption, ilw-page[illinois] blockquote, ilw-content blockquote,
+ilw-page[illinois] dd, ilw-content dd, ilw-page[illinois] dt, ilw-content dt {
+    display: block;
+    font: 400 1.125rem/1.667rem var(--il-font-sans);
+    color: var(--ilw-text--color);
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+  }
+
+ilw-page[illinois] td, ilw-content td, ilw-page[illinois] th, ilw-content th {
+  font: 400 1.125rem/1.667rem var(--il-font-sans);
+  color: var(--ilw-text--color);
+}
+
+ilw-page[illinois] pre, ilw-content pre {
+  color: var(--ilw-text--color);
+}
+
+ilw-page[illinois] b, ilw-content b, ilw-page[illinois] strong, ilw-content strong {
+  font-weight: 700;
+}
+
+ilw-page[illinois] i, ilw-content i, ilw-page[illinois] em, ilw-content em {
+  font-style: italic;
+}
+
+ilw-page[illinois] a, ilw-content a {
+  color: var(--ilw-link--color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+ilw-page[illinois] a:visited, ilw-content a:visited {
+  color: var(--ilw-link--visited-color);
+}
+
+ilw-page[illinois] a:hover, ilw-content a:hover, ilw-page[illinois] a:focus, ilw-content a:focus {
+  color: var(--ilw-link--focused-color);
+}
+
+ilw-page[illinois] a:focus, ilw-content a:focus {
+  outline: var(--ilw-link--focused-outline); 
+  background-color: var(--ilw-link--focused-background-color); 
+}
+
+ilw-page[illinois] h1, ilw-content h1, ilw-page[illinois] h2, ilw-content h2, ilw-page[illinois] h3, ilw-content h3, 
+ilw-page[illinois] h4, ilw-content h4, ilw-page[illinois] h5, ilw-content h5, ilw-page[illinois] h6, ilw-content h6 {
+  display: block;
+  color: inherit;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: 700;
+  font-family: var(--il-font-sans);
+  color: var(--ilw-heading--color);
+  margin-top: 1.8rem;
+  margin-bottom: 0;
+}
+
+ilw-page[illinois] h1, ilw-content h1 {
+  font-size: 4.25rem;
+  line-height: 5.25rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 2.625rem;
+  font-family: var(--il-font-heading);
+}
+
+ilw-page[illinois] h2, ilw-content h2 {
+  font-size: 2.625rem;
+  line-height: 2.625rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 1.3125rem;
+}
+
+ilw-page[illinois] h3, ilw-content h3 {
+  font-size: 1.625rem;
+  line-height: 2.625rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 1.3125rem;
+}
+
+ilw-page[illinois] h4, ilw-content h4, ilw-page[illinois] h5, ilw-content h5, ilw-page[illinois] h6, ilw-content h6 {
+  font-size: 1.2rem;
+  line-height: 1.667rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 0rem;
+  }
+
+ilw-page[illinois] ul, ilw-content ul, ilw-page[illinois] ol, ilw-content ol {
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+}
+
+ilw-page[illinois] li, ilw-content li {
+  font: 400 1.125rem/1.667 var(--il-font-sans);
+  color: var(--ilw-text--color);
 }

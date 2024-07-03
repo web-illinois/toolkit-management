@@ -1,0 +1,13 @@
+:root {
+    --ilw-background--color: white;
+    --ilw-text--color: var(--il-storm-darker-2);
+    --ilw-heading--color: var(--il-blue);
+    --ilw-link--color: var(--il-blue);
+    --ilw-link--visited-color: var(--il-blue);
+    --ilw-link--focused-color: var(--il-altgeld);
+    --ilw-link--focused-outline: initial;
+    --ilw-link--focused-background-color: initial;
+    --ilw-panel--color: white;
+    --ilw-panel--highlighted-color: white;
+    --ilw-panel--focused-color: white;
+}

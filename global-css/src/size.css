@@ -1,5 +1,6 @@
 .ilw-width-full {
     width: 100vw;
+    display: block;
     position: relative;
     left: 50%;
     right: 50%;

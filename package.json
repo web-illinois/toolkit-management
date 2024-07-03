@@ -4,11 +4,14 @@
   "description": "Global CSS and JS for toolkit",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "npm run css-minify && npm run concat",
+    "build": "npm run css-minify && npm run concat && npm run vite",
+    "vite": "vite build --emptyOutDir",
     "css-minify": "css-minify -d global-css/src/ -o dist",
-    "concat": "concat -o dist/ilw-global.css dist/buttons.min.css dist/size.min.css dist/screen-reader.min.css dist/page.min.css"
+    "concat": "concat -o dist/ilw-global.css dist/buttons.min.css dist/size.min.css dist/screen-reader.min.css dist/root.min.css dist/page.min.css"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/web-illinois/toolkit-management.git"
@@ -20,8 +23,23 @@
   },
   "homepage": "https://github.com/web-illinois/toolkit-management#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "concat": "^1.0.3",
     "css-minify": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.36.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "serve": "^11.3.2",
     "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@illinois-toolkit/ilw-back-to-top": "1.0.1-alpha",
+    "@illinois-toolkit/ilw-content": "0.9.1",
+    "@illinois-toolkit/ilw-hero": "0.9.0",
+    "@illinois-toolkit/ilw-page": "0.9.0",
+    "@rollup/plugin-multi-entry": "^6.0.1",
+    "postcss": "^8.4.38",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }
