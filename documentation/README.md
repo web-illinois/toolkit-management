@@ -3,11 +3,11 @@
 This is a guideline for developers to create new components for the Toolkit. 
 
 ## Creating a new repository
-Create a new repository. It should have a topic of "illinois-toolkit" and be a self-contained repository. 
+[Create a new repository from the toolkit template.](https://github.com/web-illinois/toolkit-template) This template will generate the Github Actions, recommended toolset, and sample pages to start testing your component. 
 
-It should only have one component, with the exception if there are secondary components that are only used in the main component. 
+Each repository should only have one component, with the exception if there are secondary components that are only used in the main component. 
 
-It should have the following branches: 
+Each repository should have the following branches: 
 * **main**: the main branch, production. This should be the default branch.
 * **release/x.x**: this is the minor production branch releases for this component.
 
@@ -37,8 +37,17 @@ See the [workflows in this repository to set up your repository](https://github.
 * Brand CSS (https://cdn.brand.illinois.edu/illinois.css) 
 * Global WIGG CSS (in this repository)
 
-### README.md file
-Use the [sample README.md file in the samples folder](https://github.com/web-illinois/toolkit-management/blob/main/samples/README.md).
+### Checklist for new components
+1. [Create a new repository from the toolkit template.](https://github.com/web-illinois/toolkit-template)
+2. Add the "illinois-toolkit" tag to the repository.
+3. Fill out the README.md in your repository. This documentation-first method will allow you to envision the best way that this component will work.
+4. Post this information into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. 
+5. Copy the sample HTML in your README.md *Code Examples* into your /samples directory.
+6. Copy the sample HTML and attribute / classes into the /builder json files.
+7. Start coding.
+8. Review the README.md, /samples directory, and /builder json files. Ensure that these match. 
+9. Post this information into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) and ask that this get added to the builder (or add them yourself).
+10. Once it has been reviewed, then add your component to NPM. At this point, it can be scheduled to be added to the toolkit. 
 
 ### JSON documentation for builder
 Create a JSON document that allows automated documentation through the toolkit builder. Use the [sample files in the global-css folder](https://github.com/web-illinois/toolkit-management/blob/main/global-css/builder). 
