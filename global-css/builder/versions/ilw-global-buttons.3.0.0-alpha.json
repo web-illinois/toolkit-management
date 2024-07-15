@@ -1,22 +1,27 @@
 {
-	"title": "Global Button Styles (button)",
-    "tag": "ilw-global-button-button",
+	"title": "Global Button Group Styles",
+    "tag": "ilw-global-buttons",
 	"github": "https://github.com/web-illinois/toolkit-management/",
     "type": "stylesheet",
-    "element-name": "button",
-    "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'button' element.",
+    "element-name": "ul",
+    "description": "The Global WIGG Stylesheet contains a group of buttons.",
 	"version": "3.0.0-alpha",
 	"date": "5/28/2024",
 	"css": "",
 	"js": "",
 	"production": false,
     "notes": "",
-	"parent-style": "text-align: center;",
+	"parent-style": "",
 	"samples": [
 		{
 			"name": "default",
-			"description": "Single button",
-			"text": "Link 1"
+			"description": "Group of buttons",
+			"text": "<li><a href='#'>Link 1</a></li><li><a href='#'>Link 2</a></li><li><a href='#'>Link 3</a></li>"
+		},
+		{
+			"name": "buttons",
+			"description": "Group of actual buttons",
+			"text": "<li><button>Link 1</button></li><li><button>Link 2</button></li><li><button>Link 3</button></li>"
 		}
 	],
 	"attributes-fixed": [],
@@ -24,10 +29,10 @@
 	"attributes": [],
 	"classes-fixed": [
 		{
-			"name": "ilw-button",
+			"name": "ilw-buttons",
 			"description": "Button group class",
 			"depreciated": false,
-			"value": "ilw-button"
+			"value": "ilw-buttons"
 		}
 	],
 	"classes": [
@@ -41,24 +46,6 @@
 				"ilw-theme-orange",
 				"ilw-theme-white",
 				"ilw-theme-white-orange"
-			]
-		},
-		{
-			"name": "width",
-			"description": "Width of buttons",
-			"depreciated": false,
-			"values": [
-				"",
-				"ilw-width-full"
-			]
-		},
-		{
-			"name": "size",
-			"description": "Size of buttons",
-			"depreciated": false,
-			"values": [
-				"",
-				"ilw-size-large"
 			]
 		}
 	],

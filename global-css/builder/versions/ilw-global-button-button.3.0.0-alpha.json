@@ -1,10 +1,10 @@
 {
-	"title": "Global Button Styles (anchor)",
-    "tag": "ilw-global-button-anchor",
+	"title": "Global Button Styles (button)",
+    "tag": "ilw-global-button-button",
 	"github": "https://github.com/web-illinois/toolkit-management/",
     "type": "stylesheet",
-    "element-name": "a",
-    "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'a' element.",
+    "element-name": "button",
+    "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'button' element.",
 	"version": "3.0.0-alpha",
 	"date": "5/28/2024",
 	"css": "",
@@ -19,14 +19,7 @@
 			"text": "Link 1"
 		}
 	],
-	"attributes-fixed": [
-		{
-			"name": "href",
-			"description": "Target URL",
-			"depreciated": false,
-			"value": "#"
-		}
-	],
+	"attributes-fixed": [],
 	"attributes-text": [],
 	"attributes": [],
 	"classes-fixed": [
@@ -48,6 +41,24 @@
 				"ilw-theme-orange",
 				"ilw-theme-white",
 				"ilw-theme-white-orange"
+			]
+		},
+		{
+			"name": "width",
+			"description": "Width of buttons",
+			"depreciated": false,
+			"values": [
+				"",
+				"ilw-width-full"
+			]
+		},
+		{
+			"name": "size",
+			"description": "Size of buttons",
+			"depreciated": false,
+			"values": [
+				"",
+				"ilw-size-large"
 			]
 		}
 	],
