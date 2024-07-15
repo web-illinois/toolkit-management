@@ -6,7 +6,6 @@ env:
   MAJORVERSION: ''
   MINORVERSION: ''
   FULLVERSION: ''
-  COMPONENT_NAME: 'ilw-global'   # set this to the web component name you are using
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -50,15 +49,28 @@ jobs:
         aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
         aws-region: us-east-2
 
+    - name: Deploy ilw-global to S3 bucket for major version
+      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/ilw-global/$MAJORVERSION --delete --acl bucket-owner-full-control
+    - name: Invalidate ilw-global Cloudfront cache for major version
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/ilw-global/$MAJORVERSION*"
+    - name: Deploy ilw-global to S3 bucket for minor version
+      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/ilw-global/$MINORVERSION --delete --acl bucket-owner-full-control
+    - name: Invalidate ilw-global Cloudfront cache for minor version
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/ilw-global/$MINORVERSION*"
+    - name: Deploy ilw-global to S3 bucket for patch (full) version
+      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/ilw-global/$FULLVERSION --delete --acl bucket-owner-full-control
+    - name: Invalidate ilw-global Cloudfront cache for patch (full) version
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/ilw-global/$FULLVERSION*"
+
     - name: Deploy toolbox to S3 bucket for major version
-      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MAJORVERSION --delete --acl bucket-owner-full-control
+      run: aws s3 sync ./dist-toolkit/ s3://cdn.toolkit.illinois.edu/content/$MAJORVERSION --delete --acl bucket-owner-full-control
     - name: Invalidate Cloudfront cache for major version
-      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MAJORVERSION*"
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$MAJORVERSION*"
     - name: Deploy toolbox to S3 bucket for minor version
-      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MINORVERSION --delete --acl bucket-owner-full-control
+      run: aws s3 sync ./dist-toolkit/ s3://cdn.toolkit.illinois.edu/content/$MINORVERSION --delete --acl bucket-owner-full-control
     - name: Invalidate Cloudfront cache for minor version
-      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MINORVERSION*"
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$MINORVERSION*"
     - name: Deploy toolbox to S3 bucket for patch (full) version
-      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
+      run: aws s3 sync ./dist-toolkit/ s3://cdn.toolkit.illinois.edu/content/$FULLVERSION --delete --acl bucket-owner-full-control
     - name: Invalidate Cloudfront cache for patch (full) version
-      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$FULLVERSION*"
