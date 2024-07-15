@@ -6,6 +6,8 @@ For information about the group, see the [Webtheme Web Component page](https://w
 
 If you want to see the toolkit components in action, see the [Toolkit Builder v3](https://builder3.toolkit.illinois.edu/)
 
+If you want to get a full list of toolkit components in Github, see the [Github repositories](https://github.com/search?q=topic%3Aillinois-toolkit+org%3Aweb-illinois&type=repositories)
+
 If you wish to contribute to the group, please see the [Documentation for Developers](https://github.com/web-illinois/toolkit-management/blob/main/documentation/README.md)
 
 For the process to add new components to the toolkit, please see the [Integration Documentation](https://github.com/web-illinois/toolkit-management/blob/main/documentation/INTEGRATION.md)
