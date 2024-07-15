@@ -2,12 +2,26 @@
 
 This is a guideline for developers to create new components for the Toolkit. 
 
+## Checklist for new components
+1. [Create a new repository from the toolkit template.](https://github.com/web-illinois/toolkit-template)
+2. Add the "illinois-toolkit" tag to the repository.
+3. Fill out the README.md in your repository. This documentation-first method will allow you to envision the best way that this component will work.
+4. Post this information into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. 
+5. Copy the sample HTML in your README.md *Code Examples* into your /samples directory.
+6. Copy the sample HTML and attribute / classes into the /builder json files.
+7. Build the component. 
+8. Review the *README.md*, */samples* directory, and */builder* json files. Ensure that these match. 
+9. Review the workflows to ensure they are created correctly and use the correct component name. 
+10. Manually run the deploy_development action to push the changes to the development server. 
+11. Post this information into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) and ask that this get added to the builder (or add them yourself).
+12. Once it has been reviewed, then add your component to NPM and create a release branch. At this point, it can be scheduled to be added to the toolkit. 
+
 ## Creating a new repository
-Create a new repository. It should have a topic of "illinois-toolkit" and be a self-contained repository. 
+[Create a new repository from the toolkit template.](https://github.com/web-illinois/toolkit-template) This template will generate the Github Actions, recommended toolset, and sample pages to start testing your component. This template does not contain the automated testing, but there are plans to do so. 
 
-It should only have one component, with the exception if there are secondary components that are only used in the main component. 
+Each repository should only have one component, with the exception if there are secondary components that are only used in the main component. 
 
-It should have the following branches: 
+Each repository should have the following branches: 
 * **main**: the main branch, production. This should be the default branch.
 * **release/x.x**: this is the minor production branch releases for this component.
 
@@ -23,9 +37,7 @@ Currently, the NPM publish process is not included in the default Github actions
 
 To deploy your application, merge to main, then mark it as a release. The deploy_production action should deploy your code automatically. Then merge it to the release branch. 
 
-If you are updating an old release (for example, main is on 3.3.1 and you need to make a patch release to 3.1), merge to the proper release branch, and then mark it as an old patch release. 
-
-See the [workflows in this repository to set up your repository](https://github.com/web-illinois/toolkit-management/tree/main/.github/workflows).
+If you are updating an old release (for example, main is on 3.3.1 and you need to make a patch release to 3.1.0), merge to the proper release branch, and then mark it as an old patch release. 
 
 ### Suggested Toolset
 * **Lit** (https://lit.dev/) for web components.
@@ -37,11 +49,8 @@ See the [workflows in this repository to set up your repository](https://github.
 * Brand CSS (https://cdn.brand.illinois.edu/illinois.css) 
 * Global WIGG CSS (in this repository)
 
-### README.md file
-Use the [sample README.md file in the samples folder](https://github.com/web-illinois/toolkit-management/blob/main/samples/README.md).
-
 ### JSON documentation for builder
-Create a JSON document that allows automated documentation through the toolkit builder. Use the [sample files in the global-css folder](https://github.com/web-illinois/toolkit-management/blob/main/global-css/builder). 
+The template has JSON documentation that the builder can pull into its build process. [See the toolkit builder repository for more information](https://github.com/web-illinois/toolkit-builder-3). 
 
 You may create more than one json file if the component has multiple uses (for example, a "Section" component may have a quote version, an introduction version, and a generic version). Because they look very different, you may have more than one json file for a component.
 

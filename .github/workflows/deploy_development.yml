@@ -7,9 +7,6 @@ on:
         required: true 
         default: ''
         type: string
-env:
-  MAJORVERSION: ''
-  COMPONENT_NAME: 'ilw-global'   # set this to the web component name you are using
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,7 +29,12 @@ jobs:
         aws-access-key-id: ${{ vars.TOOLKIT_AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
         aws-region: us-east-2
-    - name: Deploy toolbox to S3 bucket
-      run: aws s3 sync ./dist/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/$VERSION --delete --acl bucket-owner-full-control
-    - name: Invalidate Cloudfront cache
-      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/$VERSION*"
+    - name: Deploy ilw-global to S3 bucket
+      run: aws s3 sync ./dist/ s3://dev.toolkit.illinois.edu/content/ilw-global/$VERSION --delete --acl bucket-owner-full-control
+    - name: Invalidate ilw-global Cloudfront cache
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/ilw-global/$VERSION*"
+    - name: Deploy toolkit to S3 bucket
+      run: aws s3 sync ./dist-toolkit/ s3://dev.toolkit.illinois.edu/content/$VERSION --delete --acl bucket-owner-full-control
+    - name: Invalidate toolkit Cloudfront cache
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$VERSION*"
+

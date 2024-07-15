@@ -7,11 +7,6 @@ on:
         required: true 
         default: ''
         type: string
-env:
-  MAJORVERSION: ''
-  MINORVERSION: ''
-  FULLVERSION: ''
-  COMPONENT_NAME: 'ilw-global'   # set this to the web component name you are using
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +18,7 @@ jobs:
       env: 
         GITHUB_BRANCH: ${{ github.event.inputs.version }}
     - name: Display version install
-      run: echo "Installing dev version ${VERSION}"
+      run: echo "Installing production version ${VERSION}"
 
     - run: npm install
     - run: npm rebuild
@@ -35,7 +30,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
         aws-region: us-east-2
 
+    - name: Deploy ilw-global to S3 bucket for version
+      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/ilw-global/$VERSION --delete --acl bucket-owner-full-control
+    - name: Invalidate ilw-global Cloudfront cache for version
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/ilw-global/$VERSION*"
     - name: Deploy toolbox to S3 bucket for version
-      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$VERSION --delete --acl bucket-owner-full-control
-    - name: Invalidate Cloudfront cache for version
-      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$VERSION*"
+      run: aws s3 sync ./dist-toolkit/ s3://cdn.toolkit.illinois.edu/content/$VERSION --delete --acl bucket-owner-full-control
+    - name: Invalidate toolbox Cloudfront cache for version
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$VERSION*"
