@@ -3,19 +3,20 @@
 This is a guideline for developers to create new components for the Toolkit. 
 
 ## Checklist for new components
-0. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), assign the issue associated with the component to yourself. Move the project to *Documenting*. 
+
+0. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), assign the issue associated with the component to yourself. Move the project to *Documenting*. If you run into an error assigning an issue, contact jonker@illinois.edu to get access. 
 1. [Create a new repository from the toolkit template.](https://github.com/web-illinois/toolkit-template)
 2. Add the "illinois-toolkit" tag to the repository.
 3. Fill out the README.md in your repository. This documentation-first method will allow you to envision the best way that this component will work.
-4. Post this information into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), move the project to *In Progress*. 
+4. *Post this information* into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), move the project to *In Progress*. You probably want to wait a few days to get feedback, although you may use your judgement in how long you wait. 
 5. Copy the sample HTML in your README.md *Code Examples* into your /samples directory.
 6. Copy the sample HTML and attribute / classes into the /builder json files.
 7. Build the component. 
 8. Review the *README.md*, */samples* directory, and */builder* json files. Ensure that these match. 
 9. Review the workflows to ensure they are created correctly and use the correct component name. 
 10. Manually run the deploy_development action to push the changes to the development server. 
-11. Post this information into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), move the project to *For Review*.
-12. Either ask for the component to be added to the toolkit builder, or add it to the builder. 
+11. Either ask for the component to be added to the toolkit builder, or [add the component to the builder yourself](https://github.com/web-illinois/toolkit-builder-3?tab=readme-ov-file#adding-to-this-project). 
+12. *Post this information* into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), move the project to *For Review*.
 13. Once it has been reviewed, then add your component to NPM and create a release branch. At this point, it can be scheduled to be added to the toolkit. 
 
 ## Creating a new repository
