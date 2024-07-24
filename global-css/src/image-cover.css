@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.ilw-image-cover img { 
+.ilw-image-cover img, .ilw-image-cover-top img, .ilw-image-cover-bottom img, .ilw-image-cover-left img, .ilw-image-cover-right img { 
     object-fit: cover; 
     position: absolute; 
     width: 100%; 
