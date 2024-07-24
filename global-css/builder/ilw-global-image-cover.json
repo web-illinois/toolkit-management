@@ -1,0 +1,11 @@
+{
+	"title": "Global Image Cover",
+    "tag": "ilw-global-image-cover",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains styles to create an image that covers over the entire area of the parent element.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+}

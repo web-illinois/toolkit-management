@@ -81,3 +81,9 @@ a.ilw-button, button.ilw-button, ul.ilw-buttons a, ul.ilw-buttons button {
         border-color: var(--ilw-button--focused-border-color);
     }
 }
+
+.ilw-button-large {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding: 20px 40px;
+}

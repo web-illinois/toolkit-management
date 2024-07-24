@@ -1,0 +1,34 @@
+.ilw-image-cover, .ilw-image-cover-top, .ilw-image-cover-bottom, .ilw-image-cover-left, .ilw-image-cover-right {
+    padding: 0px;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 310px;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+}
+
+.ilw-image-cover img { 
+    object-fit: cover; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+}
+
+.ilw-image-cover-top img {
+    object-position: top;
+}
+
+.ilw-image-cover-bottom img {
+    object-position: bottom;
+}
+
+.ilw-image-cover-left img {
+    object-position: left;
+}
+
+.ilw-image-cover-right img {
+    object-position: right;
+}

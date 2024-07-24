@@ -1,0 +1,41 @@
+{
+	"title": "Global Image Cover",
+    "tag": "ilw-global-image-cover",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains styles to create an image that covers over the entire area of the parent element.",
+	"version": "3.0.0-alpha",
+	"date": "7/17/2024",
+	"css": "",
+	"js": "",
+	"production": false,
+    "notes": "",
+	"parent-style": "",
+	"samples": [
+		{
+			"name": "default",
+			"description": "Image",
+			"text": "<img alt='' src='https://picsum.photos/1920/1280'>"
+		}
+	],
+	"attributes-fixed": [],
+	"attributes-text": [],
+	"attributes": [],
+	"classes-fixed": [],
+	"classes": [
+		{
+			"name": "orientation",
+			"description": "Where the focus of the image is (default is center)",
+			"depreciated": false,
+			"values": [
+				"ilw-image-cover",
+				"ilw-image-cover-top",
+				"ilw-image-cover-bottom",
+				"ilw-image-cover-left",
+				"ilw-image-cover-right"
+			]
+		}
+	],
+	"css-variables": []
+}
