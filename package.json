@@ -17,7 +17,7 @@
     "url": "git+https://github.com/web-illinois/toolkit-management.git"
   },
   "author": "WIGG Web Components",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/web-illinois/toolkit-management/issues"
   },
