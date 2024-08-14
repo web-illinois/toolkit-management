@@ -28,6 +28,9 @@
     "build": "vite build --config vite.build.config.js --emptyOutDir",
     "preview": "vite preview"
   },
+  {
+    "license": "MIT",
+  },
   "dependencies": {
     "lit": "3.1.3"
   },
