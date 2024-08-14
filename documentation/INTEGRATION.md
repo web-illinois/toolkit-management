@@ -4,12 +4,13 @@
 
   1. Make sure the project has the topic *illinois-toolkit*
   2. Make sure the project has github actions set up correctly
-  3. Make sure the package.json has the proper name and is referencing the @illinois-toolkit organization
-  4. Make sure the package.json has ``"type": "module",`` in the package
-  5. Make sure the package.json has a proper exports command. 
-  6. Make sure the package.json is referencing ``"lit": "3.1.3"``
-  7. Make sure the /builder folder has both a component json (ilw-xxxxxx.json) and a component version json (ilw-xxxxxx.1.0.0)
-  8. Make sure the project has a license associated with it (as of this writing, we recommend using the [MIT license](https://choosealicense.com/licenses/mit/))
+  3. Make sure the /builder folder has both a component json (ilw-xxxxxx.json) and a component version json (ilw-xxxxxx.1.0.0)
+  4. Make sure the project has a license associated with it (as of this writing, we recommend using the [MIT license](https://choosealicense.com/licenses/mit/))
+  5. Make sure the package.json has the proper name and is referencing the @illinois-toolkit organization
+  6. Make sure the package.json has ``"type": "module",`` in the package
+  7. Make sure the package.json has a proper exports command. 
+  8. Make sure the package.json is referencing ``"lit": "3.1.3"``
+  9. Make sure the package.json contains the MIT license (default is ISC). 
 
 ### Example package.json file
 
