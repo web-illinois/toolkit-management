@@ -9,6 +9,7 @@
   5. Make sure the package.json has a proper exports command. 
   6. Make sure the package.json is referencing ``"lit": "3.1.3"``
   7. Make sure the /builder folder has both a component json (ilw-xxxxxx.json) and a component version json (ilw-xxxxxx.1.0.0)
+  8. Make sure the project has a license associated with it (as of this writing, we recommend using the [MIT license](https://choosealicense.com/licenses/mit/))
 
 ### Example package.json file
 
@@ -31,7 +32,8 @@
   },
   "devDependencies": {
     "vite": "^5.2.0"
-  } ```
+  }
+```
 
 ## Integrating into the toolkit
 
@@ -42,7 +44,7 @@
   5. Run the NPM build script to ensure that everything is working. If not, then investigate and update the patch version. 
      * Make sure you push the changes back to the proper repository
      * Make sure you change the toolkit management package.json file to reference the new version
-  6. Copy the builder .json files to the builder repository. 
+  6. Update the main builder .json files to reflect the new updates to the toolkit. You should not need to touch the files in `/versions`.  
 
 ### NPM process
 
@@ -50,12 +52,3 @@
 ``` npm init --scope=@illinois-toolkit ```
 #### To publish: 
 ``` npm publish --access public ```
-
-## Integrating into the builder
-
-  1. Get the latest version of the toolkit-builder3 from the Git repository. 
-  2. Copy the component json file to \site\imported_json\components
-  3. Copy the version information to \site\imported_json\component_versions
-  4. Run the NPM build script to ensure that everything is working.
-  5. Run the local copy to confirm everything looks OK. 
-  6. Push the changes.
