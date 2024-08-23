@@ -15,18 +15,30 @@
 ### Example package.json file
 
 ``` "name": "@illinois-toolkit/ilw-back-to-top",
+  "description": "Illinois Toolkit: Back-to-top arrow to move a user to the top of the page.",
+  "repository": "github:web-illinois/ilw-back-to-top",
+  "author": "WIGG Web Components",
+  "license": "MIT",
   "private": false,
   "version": "1.0.0-alpha",
   "type": "module",
+  "files": [
+    "src/**",
+    "dist/**",
+    "builder/**"
+  ],
   "exports": {
     ".": {
       "import": "./src/ilw-back-to-top.js"
+      "require": "./src/ilw-back-to-top.cjs"
+      "default": "./src/ilw-back-to-top.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build --config vite.build.config.js --emptyOutDir",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepack": "npm run build"
   },
   {
     "license": "MIT",
@@ -48,7 +60,7 @@
   5. Run the NPM build script to ensure that everything is working. If not, then investigate and update the patch version. 
      * Make sure you push the changes back to the proper repository
      * Make sure you change the toolkit management package.json file to reference the new version
-  6. Update the main builder .json files to reflect the new updates to the toolkit. You should not need to touch the files in `/versions`.  
+  6. Copy the builder .json files to the builder repository. 
 
 ### NPM process
 
@@ -56,3 +68,12 @@
 ``` npm init --scope=@illinois-toolkit ```
 #### To publish: 
 ``` npm publish --access public ```
+
+## Integrating into the builder
+
+  1. Get the latest version of the toolkit-builder3 from the Git repository. 
+  2. Copy the component json file to \site\imported_json\components
+  3. Copy the version information to \site\imported_json\component_versions
+  4. Run the NPM build script to ensure that everything is working.
+  5. Run the local copy to confirm everything looks OK. 
+  6. Push the changes.

@@ -12,7 +12,7 @@ This is a guideline for developers to create new components for the Toolkit.
 5. Copy the sample HTML in your README.md *Code Examples* into your /samples directory.
 6. Copy the sample HTML and attribute / classes into the /builder json files.
 7. Build the component. 
-8. Review the *README.md*, */samples* directory, and */builder* json files. Ensure that these match. 
+8. Review the *package.json*, *README.md*, */samples* directory, and */builder* json files. Ensure that these match. 
 9. Review the workflows to ensure they are created correctly and use the correct component name. 
 10. Manually run the deploy_development action to push the changes to the development server. 
 11. Either ask for the component to be added to the toolkit builder, or [add the component to the builder yourself](https://github.com/web-illinois/toolkit-builder-3?tab=readme-ov-file#adding-to-this-project). 
@@ -33,12 +33,11 @@ This repository should have four Github Actions.
 * **deploy_production_manual.yml**: this will deploy the major, minor and patch version to the toolkit CDN (this can be manually triggered).
 * **deploy_development.yml**: this will deploy a development branch to the dev.toolkit.illinois.edu site (this can be manually triggered).
 * **delete_development.yml**: this will delete all development areas from the dev.toolkit.illinois.edu site (this can be manually triggered).
+* **publish_npm.yml**: this installs the component (this can be manually triggered and is run when adding a release)
 
 Patch releases should not be overwritten -- the only time that the *deploy_production_manual.yml* action should be triggered is if there is a problem with the *deploy_production.yml* deploy, and even then, the preference is to re-run the failed action. 
 
-Currently, the NPM publish process is not included in the default Github actions, but you may add them if you want.
-
-To deploy your application, merge to main, then mark it as a release. The deploy_production action should deploy your code automatically. Then merge it to the release branch. 
+To deploy your application, merge to main, then mark it as a release. The deploy_production action should deploy your code automatically and the publish_npm action should deploy it to NPM. Then merge it to the release branch. 
 
 If you are updating an old release (for example, main is on 3.3.1 and you need to make a patch release to 3.1.0), merge to the proper release branch, and then mark it as an old patch release. 
 
