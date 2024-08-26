@@ -1,4 +1,4 @@
-import '../dist/page.min.css';
+import '../dist/ilw-global.css';
 import 'lit';
 
 import '@illinois-toolkit/ilw-accordion';
