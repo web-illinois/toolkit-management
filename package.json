@@ -7,7 +7,7 @@
     "build": "npm run css-minify && npm run concat && npm run vite",
     "vite": "vite build --emptyOutDir",
     "css-minify": "css-minify -d global-css/src/ -o dist",
-    "concat": "concat -o dist/ilw-global.css dist/buttons.min.css dist/image-cover.min.css dist/page.min.css dist/root.min.css dist/screen-reader.min.css dist/width-full.min.css"
+    "concat": "concat -o dist/ilw-global.css dist/root.min.css dist/buttons.min.css dist/image-cover.min.css dist/screen-reader.min.css"
   },
   "files": [
     "dist"
@@ -39,13 +39,14 @@
     "@illinois-toolkit/ilw-breadcrumbs": "1.0.0-alpha",
     "@illinois-toolkit/ilw-call-to-action": "1.0.0-alpha",
     "@illinois-toolkit/ilw-card": "1.0.0-alpha.0",
-    "@illinois-toolkit/ilw-columns": "1.0.0-alpha",
-    "@illinois-toolkit/ilw-content": "1.0.0-alpha",
+    "@illinois-toolkit/ilw-columns": "1.0.0-alpha1",
+    "@illinois-toolkit/ilw-content": "1.0.0-alpha1",
     "@illinois-toolkit/ilw-grid": "1.0.0-alpha",
     "@illinois-toolkit/ilw-hero": "1.0.0-alpha",
-    "@illinois-toolkit/ilw-page": "1.0.0-alpha",
+    "@illinois-toolkit/ilw-page": "1.0.0-alpha1",
     "@illinois-toolkit/ilw-page-title": "1.0.0-alpha",
     "@illinois-toolkit/ilw-pagination": "1.0.0-alpha",
+    "@illinois-toolkit/ilw-quote": "1.0.0-alpha",
     "@illinois-toolkit/ilw-tabs": "1.0.0-alpha",
     "@illinois-toolkit/ilw-video": "1.0.0-alpha",
     "@rollup/plugin-multi-entry": "^6.0.1",
