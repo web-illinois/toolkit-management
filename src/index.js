@@ -14,5 +14,6 @@ import '@illinois-toolkit/ilw-page';
 import '@illinois-toolkit/ilw-page-title';
 import '@illinois-toolkit/ilw-pagination';
 import '@illinois-toolkit/ilw-quote';
+import '@illinois-toolkit/ilw-spacer';
 import '@illinois-toolkit/ilw-tabs';
 import '@illinois-toolkit/ilw-video';
