@@ -141,7 +141,8 @@ Bad:
 * Use container queries when possible (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) 
 * Be aware of the distinction between em, rem, vw/vh, cqw/cqh, cqi, and cqb. Ensure that the use of absolute or fixed size doesn’t interfere with accessibility requirements. 
 * Be aware that different heading types may be used in a component, so ensure that your style is set no matter which heading is used (from h2 – h6). You may assume that the h1 header is only used for page titles. 
-* Consider building the theme and width attribute in the component. For the width component, this is only meant to allow the user to choose to “break” the margins and go full width. Under normal circumstances, a component should grow to fill the container.
+* Consider building the theme and width attribute in the component. For the width component, this is only meant to allow the user to choose to “break” the margins and go full width. Under normal circumstances (including the default behavior of all components), a component should grow to fill the container. 
+* The default behavior should be "white background", even if the component would normally be used as a blue background. 
 * Consider how the end user may use or expand this component. Because of this, you may want favor slots over attributes if the attributes are writing HTML in the component, and favor CSS styles over attributes if the attributes are changing styles of the HTML inside the component. 
 * When handling state of the component, consider triggering this via a watched reactive property (https://lit.dev/docs/components/properties/). 
 * When handling state between multiple components, consider using an event and event listener (https://lit.dev/docs/components/events/).
@@ -162,8 +163,8 @@ ilw-hero div.background { background: var(--il-blue); }
 ````
 
 ### Recommended Attribute Names
-* **Theme:** blue, orange, white, gray, blue-gradient, orange-gradient
+* **Theme:** blue, orange, gray, blue-gradient, orange-gradient
 * **Size:** xx-small, x-small, small, medium, large, x-large, xx-large
-* **Width** (how wide a component will be): full, auto
+* **Width** (how wide a component will be): full, auto, page
 * **Align** (where an item goes in a space): left, center, right, top, bottom, top-left, top-right, bottom-left, bottom-right
 * **Padding** (padding around the item): should use the standard length / percentage CSS. 

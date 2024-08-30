@@ -10,4 +10,5 @@
     --ilw-panel--color: white;
     --ilw-panel--highlighted-color: white;
     --ilw-panel--focused-color: white;
+    --ilw-margin--side: max(1.875rem, calc(50cqw - 37.5rem));
 }

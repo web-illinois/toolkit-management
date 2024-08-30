@@ -60,7 +60,6 @@
   5. Run the NPM build script to ensure that everything is working. If not, then investigate and update the patch version. 
      * Make sure you push the changes back to the proper repository
      * Make sure you change the toolkit management package.json file to reference the new version
-  6. Copy the builder .json files to the builder repository. 
 
 ### NPM process
 
@@ -71,9 +70,4 @@
 
 ## Integrating into the builder
 
-  1. Get the latest version of the toolkit-builder3 from the Git repository. 
-  2. Copy the component json file to \site\imported_json\components
-  3. Copy the version information to \site\imported_json\component_versions
-  4. Run the NPM build script to ensure that everything is working.
-  5. Run the local copy to confirm everything looks OK. 
-  6. Push the changes.
+See [the Toolkit Builder 3 documentation](https://github.com/web-illinois/toolkit-builder-3/blob/main/README.md#adding-to-this-project)

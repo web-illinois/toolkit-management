@@ -1,9 +1,9 @@
 :root {
-    --ilw-button--background-color: var(--il-blue);
-    --ilw-button--foreground-color: white;
+    --ilw-button--background-color: white;
+    --ilw-button--foreground-color: var(--il-blue);
     --ilw-button--border-color: var(--il-blue);
-    --ilw-button--focused-background-color: white;
-    --ilw-button--focused-foreground-color: var(--il-blue);
+    --ilw-button--focused-background-color: var(--il-blue);
+    --ilw-button--focused-foreground-color: white;
     --ilw-button--focused-border-color: var(--il-blue);
 }
 
@@ -16,12 +16,12 @@
     --ilw-button--focused-border-color: var(--il-orange);
 }
 
-.ilw-theme-white {
-    --ilw-button--background-color: white;
-    --ilw-button--foreground-color: var(--il-blue);
+.ilw-theme-blue {
+    --ilw-button--background-color: var(--il-blue);
+    --ilw-button--foreground-color: white;
     --ilw-button--border-color: var(--il-blue);
-    --ilw-button--focused-background-color: var(--il-blue);
-    --ilw-button--focused-foreground-color: white;
+    --ilw-button--focused-background-color: white;
+    --ilw-button--focused-foreground-color: var(--il-blue);
     --ilw-button--focused-border-color: var(--il-blue);
 }
 
