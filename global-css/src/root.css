@@ -7,6 +7,9 @@
     --ilw-link--focused-color: var(--il-altgeld);
     --ilw-link--focused-outline: initial;
     --ilw-link--focused-background-color: initial;
+    --ilw-link--focus-background-color: var(--il-industrial-lighter-4);
+    --ilw-link--focus-color: var(--il-blue);
+    --ilw-link--focus-outline: solid var(--il-blue) 1px;
     --ilw-panel--color: white;
     --ilw-panel--highlighted-color: white;
     --ilw-panel--focused-color: white;
