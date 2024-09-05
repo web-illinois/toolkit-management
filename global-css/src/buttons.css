@@ -111,7 +111,7 @@ a.ilw-button, button.ilw-button, ul.ilw-buttons a, ul.ilw-buttons button {
         color: var(--ilw-link--focus-color);
         border-color: var(--ilw-link--focus-color);
         text-decoration: underline;
-        outline: var(--ilw-link--focus-background-color);
+        outline: var(--ilw-link--focus-outline);
     }
     &:active {
         background-color: var(--ilw-button--active-background-color);
