@@ -3,6 +3,7 @@
 <head>
     <title>Test Styles</title>
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="src/root.css"></link>
     <link rel="stylesheet" href="src/buttons.css"></link>
     <link rel="stylesheet" href="src/image-cover.css"></link>
     <link rel="stylesheet" href="src/screen-reader.css"></link>
@@ -16,26 +17,39 @@
     <p>Text that should be visible. There should be harmony between what a user sees and what they hear. This class should not be utilized unless it is adding some additional context to remove ambiguity. For example, adding unique context to “read more” links for a serious of article teasers would be an acceptable use. Hiding headings visually would not be acceptable.</p>
     
     <h2>Buttons</h2>
+    <div style="background: #777; padding: 20px;">
+        <div><a href="#" class="ilw-button">Unmarked</a></div>
+        <div><a href="#" class="ilw-button ilw-theme-blue">Blue</a></div>
+        <div><a href="#" class="ilw-button ilw-theme-orange">Orange</a></div>
+        <div><a href="#" class="ilw-button ilw-theme-blue-1">Blue 1</a></div>
+        <div><a href="#" class="ilw-button ilw-theme-orange-1">Orange 1</a></div>
+        <div><a href="#" class="ilw-button ilw-theme-blue-2">Blue 2</a></div>
+        <div><a href="#" class="ilw-button ilw-theme-orange-2">Orange 2</a></div>
+    </div>
+
     <ul class="ilw-buttons">
         <li><a href="#">Test Link 1</a></li>
         <li><a href="#" class="ilw-theme-orange">Test Link 2</a></li>
         <li><a href="#" class="ilw-theme-blue">Test Link 3</a></li>
-        <li><a href="#" class="ilw-theme-white-orange">Test Link 4</a></li>
+        <li><a href="#" class="ilw-theme-orange-1">Test Link 4</a></li>
     </ul>
     <ul class="ilw-buttons ilw-width-full">
         <li><a href="#">Test Link 1</a></li>
         <li><a href="#" class="ilw-theme-orange">Test Link 2</a></li>
         <li><a href="#" class="ilw-theme-blue">Test Link 3</a></li>
-        <li><a href="#" class="ilw-theme-white-orange">Test Link 4</a></li>
+        <li><a href="#" class="ilw-theme-orange-1">Test Link 4</a></li>
     </ul>
     <ul class="ilw-buttons" style="max-width: 400px;">
         <li><a href="#">Test Link 1</a></li>
         <li><a href="#" class="ilw-theme-orange">Test Link With Long Text 2</a></li>
         <li><a href="#" class="ilw-theme-blue">Test Link 3</a></li>
-        <li><a href="#" class="ilw-theme-white-orange">Test Link 4</a></li>
+        <li><a href="#" class="ilw-theme-orange-1">Test Link 4</a></li>
     </ul>
     <div>
         <a href="#" class="ilw-button">Test Link 5</a>
+    </div>
+    <div>
+        <button href="#" class="ilw-button" disabled>Test Link Disabled</button>
     </div>
     <div>
         <a href="#" class="ilw-button ilw-width-full">Test Link 6</a>
