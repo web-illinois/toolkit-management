@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "@illinois-toolkit/ilw-accordion": "1.0.0-alpha1",
-    "@illinois-toolkit/ilw-back-to-top": "1.0.2-alpha",
-    "@illinois-toolkit/ilw-breadcrumbs": "1.0.0-alpha",
+    "@illinois-toolkit/ilw-back-to-top": "1.0.2-alpha1",
+    "@illinois-toolkit/ilw-breadcrumbs": "1.0.0-alpha1",
     "@illinois-toolkit/ilw-call-to-action": "1.0.0-alpha",
     "@illinois-toolkit/ilw-card": "1.0.0-alpha.0",
     "@illinois-toolkit/ilw-columns": "1.0.0-alpha2",
