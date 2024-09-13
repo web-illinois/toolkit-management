@@ -1,4 +1,4 @@
-name: deploy_development
+name: deploy_development_manual
 on:
   workflow_dispatch:
     inputs:
@@ -37,4 +37,12 @@ jobs:
       run: aws s3 sync ./dist-toolkit/ s3://dev.toolkit.illinois.edu/content/$VERSION --delete --acl bucket-owner-full-control
     - name: Invalidate toolkit Cloudfront cache
       run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$VERSION*"
+    - name: Deploy ilw-global to S3 bucket, latest path
+      run: aws s3 sync ./dist/ s3://dev.toolkit.illinois.edu/content/ilw-global/latest --delete --acl bucket-owner-full-control
+    - name: Invalidate ilw-global Cloudfront cache, latest path
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/ilw-global/latest*"
+    - name: Deploy toolkit to S3 bucket, latest path
+      run: aws s3 sync ./dist-toolkit/ s3://dev.toolkit.illinois.edu/content/latest --delete --acl bucket-owner-full-control
+    - name: Invalidate toolkit Cloudfront cache, latest path
+      run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/latest*"
 
