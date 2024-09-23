@@ -5,6 +5,7 @@
     "type": "stylesheet",
     "element-name": "div",
     "description": "The Global WIGG Stylesheet contains styles to create an image that covers over the entire area of the parent element.",
+    "purpose": "Cover an entire element with an image.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "3.0-beta"

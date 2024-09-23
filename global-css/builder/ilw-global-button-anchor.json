@@ -5,6 +5,7 @@
     "type": "stylesheet",
     "element-name": "a",
     "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'a' element.",
+    "purpose": "Turn a link into a button.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "3.0-beta"

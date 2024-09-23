@@ -5,6 +5,7 @@
     "type": "stylesheet",
     "element-name": "div",
     "description": "The Global WIGG Stylesheet contains buttons.",
+    "purpose": "Use standard styling on a button group.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "3.0-beta"
