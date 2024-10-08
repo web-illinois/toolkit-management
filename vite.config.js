@@ -5,7 +5,7 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 export default defineConfig({
   root: 'src',
   resolve: {
-    dedupe: ['lit']
+    dedupe: ['lit', '@illinois-toolkit/ilw-card', '@illinois-toolkit/ilw-icon']
   },
   build: {
     outDir: '../dist-toolkit',
