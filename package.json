@@ -1,13 +1,13 @@
 {
   "name": "@illinois-toolkit/toolkit-management",
-  "version": "3.0.0-alpha",
+  "version": "3.0.0-beta",
   "description": "Global CSS and JS for toolkit",
   "main": "index.js",
   "scripts": {
     "build": "npm run css-minify && npm run concat && npm run vite",
     "vite": "vite build --emptyOutDir",
     "css-minify": "css-minify -d global-css/src/ -o dist",
-    "concat": "concat -o dist/ilw-global.css dist/root.min.css dist/buttons.min.css dist/image-cover.min.css dist/screen-reader.min.css"
+    "concat": "concat -o dist/ilw-global.css dist/root.min.css dist/buttons.min.css dist/image-cover.min.css dist/icon.min.css dist/screen-reader.min.css"
   },
   "files": [
     "dist"
@@ -39,12 +39,12 @@
     "@illinois-toolkit/ilw-breadcrumbs": "1.0.0-beta",
     "@illinois-toolkit/ilw-call-to-action": "1.0.0-beta",
     "@illinois-toolkit/ilw-card": "1.0.0-beta",
-    "@illinois-toolkit/ilw-columns": "1.0.0-beta",
-    "@illinois-toolkit/ilw-content": "1.0.0-beta",
-    "@illinois-toolkit/ilw-grid": "1.0.0-beta",
-    "@illinois-toolkit/ilw-hero": "1.0.0-beta",
+    "@illinois-toolkit/ilw-columns": "1.0.1-beta",
+    "@illinois-toolkit/ilw-content": "1.0.1-beta",
+    "@illinois-toolkit/ilw-grid": "1.0.1-beta",
+    "@illinois-toolkit/ilw-hero": "1.0.1-beta",
     "@illinois-toolkit/ilw-icon": "1.0.0-beta",
-    "@illinois-toolkit/ilw-page": "1.0.0-beta",
+    "@illinois-toolkit/ilw-page": "1.0.1-beta",
     "@illinois-toolkit/ilw-page-title": "1.0.0-beta",
     "@illinois-toolkit/ilw-pagination": "1.0.0-beta",
     "@illinois-toolkit/ilw-quote": "1.0.0-beta",

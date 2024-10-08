@@ -1,0 +1,21 @@
+:root {
+    --ilw-icon-row--align-items: top;
+    --ilw-icon-row--gap: 18px;
+    --ilw-icon-row--icon-height: 20px;
+    --ilw-icon-row--margin-bottom: 25px;
+}
+
+.ilw-icon-row {
+    display: flex;
+    gap: var(--ilw-icon-row--gap);
+    margin-bottom: var(--ilw-icon-row--margin-bottom);
+    align-items: var(--ilw-icon-row--align-items);
+}
+
+.ilw-icon-row img {
+    height: var(--ilw-icon-row--gap);
+}
+
+.ilw-icon-row p {
+    margin: 0;
+}
