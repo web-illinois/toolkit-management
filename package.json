@@ -47,6 +47,7 @@
     "@illinois-toolkit/ilw-page": "1.0.1-beta",
     "@illinois-toolkit/ilw-page-title": "1.0.0-beta",
     "@illinois-toolkit/ilw-pagination": "1.0.0-beta",
+    "@illinois-toolkit/ilw-profile-card": "1.0.0-beta",
     "@illinois-toolkit/ilw-quote": "1.0.0-beta",
     "@illinois-toolkit/ilw-section-nav": "1.0.0-beta",
     "@illinois-toolkit/ilw-spacer": "1.0.0-beta",
