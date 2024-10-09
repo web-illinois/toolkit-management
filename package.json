@@ -34,7 +34,7 @@
     "vite": "^5.4.2"
   },
   "dependencies": {
-    "@illinois-toolkit/ilw-accordion": "1.0.0-beta",
+    "@illinois-toolkit/ilw-accordion": "1.0.1-beta",
     "@illinois-toolkit/ilw-back-to-top": "1.0.0-beta",
     "@illinois-toolkit/ilw-breadcrumbs": "1.0.0-beta",
     "@illinois-toolkit/ilw-call-to-action": "1.0.1-beta",
@@ -52,7 +52,7 @@
     "@illinois-toolkit/ilw-section-nav": "1.0.0-beta",
     "@illinois-toolkit/ilw-spacer": "1.0.0-beta",
     "@illinois-toolkit/ilw-statistic": "1.0.0-beta",
-    "@illinois-toolkit/ilw-tabs": "1.0.0-beta",
+    "@illinois-toolkit/ilw-tabs": "1.0.1-beta",
     "@illinois-toolkit/ilw-video": "1.0.0-beta",
     "@rollup/plugin-multi-entry": "^6.0.1",
     "postcss": "^8.4.41",
