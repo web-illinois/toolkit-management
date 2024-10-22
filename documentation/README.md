@@ -162,3 +162,12 @@ ilw-hero div.background { background: var(--il-blue); }
 * **Width** (how wide a component will be): full, auto, page
 * **Align** (where an item goes in a space): left, center, right, top, bottom, top-left, top-right, bottom-left, bottom-right
 * **Padding** (padding around the item): should use the standard length / percentage CSS. 
+
+## Checklist to update an existing component
+
+This is assuming you have an existing component in beta, and you want to move it to production. 
+
+1. Create a production version builder .json file
+2. Update your main builder .json files
+3. Update your package.json file
+4. Run the package.json install to update your package-lock.json
