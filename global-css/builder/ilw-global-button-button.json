@@ -6,7 +6,7 @@
     "element-name": "button",
     "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'button' element.",
     "purpose": "Use standard styling on a button.",
-    "toolkit-version": "",
-    "production-version": "",
+    "toolkit-version": "3.0",
+    "production-version": "3.0",
     "development-version": "3.0-beta"
 }
