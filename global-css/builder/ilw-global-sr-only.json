@@ -6,7 +6,7 @@
     "element-name": "div",
     "description": "The Global WIGG Stylesheet contains styles to make an item visible for a screen reader but not displayed.",
     "purpose": "Add textual context for assistive technology.",
-    "toolkit-version": "",
-    "production-version": "",
+    "toolkit-version": "3.0",
+    "production-version": "3.0",
     "development-version": "3.0-beta"
 }
