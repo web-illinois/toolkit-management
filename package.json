@@ -7,7 +7,7 @@
     "build": "npm run css-minify && npm run concat && npm run vite",
     "vite": "vite build --emptyOutDir",
     "css-minify": "css-minify -d global-css/src/ -o dist",
-    "concat": "concat -o dist/ilw-global.css dist/root.min.css dist/buttons.min.css dist/image-cover.min.css dist/icon.min.css dist/screen-reader.min.css"
+    "concat": "concat -o dist/ilw-global.css dist/_import.min.css dist/root.min.css dist/buttons.min.css dist/image-cover.min.css dist/icon.min.css dist/screen-reader.min.css"
   },
   "files": [
     "dist"
@@ -34,7 +34,7 @@
     "vite": "^5.4.2"
   },
   "dependencies": {
-    "@illinois-toolkit/ilw-accordion": "1.0.0",
+    "@illinois-toolkit/ilw-accordion": "1.0.1",
     "@illinois-toolkit/ilw-back-to-top": "1.0.0",
     "@illinois-toolkit/ilw-breadcrumbs": "1.0.0",
     "@illinois-toolkit/ilw-call-to-action": "1.0.0",
@@ -47,6 +47,7 @@
     "@illinois-toolkit/ilw-page": "1.0.0",
     "@illinois-toolkit/ilw-page-title": "1.0.0",
     "@illinois-toolkit/ilw-pagination": "1.0.0",
+    "@illinois-toolkit/ilw-profile": "1.0.0",
     "@illinois-toolkit/ilw-profile-card": "1.0.0",
     "@illinois-toolkit/ilw-quote": "1.0.0",
     "@illinois-toolkit/ilw-section-nav": "1.0.0",
