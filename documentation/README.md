@@ -162,3 +162,29 @@ ilw-hero div.background { background: var(--il-blue); }
 * **Width** (how wide a component will be): full, auto, page
 * **Align** (where an item goes in a space): left, center, right, top, bottom, top-left, top-right, bottom-left, bottom-right
 * **Padding** (padding around the item): should use the standard length / percentage CSS. 
+
+#### The Width attribute
+
+If there is no width attribute, the component will respect all margins and not alter itself in any way. 
+
+`width="full"` means the entire component will break any parent margins and go the full width of the screen. The first image (the orange title where it is flush with the left margin) represents this width. 
+
+`width="page"` means that some parts of the component will break any parent margins and go the full width of the screen, but not all of it. This is going to be based on the component (so the background image would go the full width, but the title wouldn't). 
+
+`width="auto"` means that it will respect the parent margins, but it will constrain some parts of the component so it will create margins that look nice. 
+
+These two html representations should theoretically look the same. 
+
+```
+<div style="max-width: 1200px; margin: 0 auto; padding: 0;">
+    <ilw-component width="page"></ilw-component>
+</div>
+```
+
+and
+
+```
+<div style="margin: 0; padding: 0;">
+    <ilw-component width="auto"></ilw-component>
+</div>
+```
