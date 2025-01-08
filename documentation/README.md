@@ -173,7 +173,7 @@ If there is no width attribute, the component will respect all margins and not a
 
 `width="auto"` means that it will respect the parent margins, but it will constrain some parts of the component so it will create margins that look nice. 
 
-These two html representations should theoretically look the same. 
+These two html representations should theoretically look the same:
 
 ```
 <div style="max-width: 1200px; margin: 0 auto; padding: 0;">
@@ -186,5 +186,21 @@ and
 ```
 <div style="margin: 0; padding: 0;">
     <ilw-component width="auto"></ilw-component>
+</div>
+```
+
+And these two html representations should theoretically look the same:
+
+```
+<div style="max-width: 1200px; margin: 0 auto; padding: 0;">
+    <ilw-component width="full"></ilw-component>
+</div>
+```
+
+and
+
+```
+<div style="margin: 0; padding: 0;">
+    <ilw-component></ilw-component>
 </div>
 ```
