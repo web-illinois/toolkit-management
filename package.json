@@ -1,6 +1,6 @@
 {
   "name": "@illinois-toolkit/toolkit-management",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Global CSS and JS for toolkit",
   "main": "index.js",
   "scripts": {
