@@ -2,6 +2,7 @@ import '../dist/ilw-global.css';
 import 'lit';
 
 import '@illinois-toolkit/ilw-accordion';
+import '@illinois-toolkit/ilw-award-list';
 import '@illinois-toolkit/ilw-back-to-top';
 import '@illinois-toolkit/ilw-breadcrumbs';
 import '@illinois-toolkit/ilw-call-to-action';
