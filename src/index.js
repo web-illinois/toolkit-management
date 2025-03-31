@@ -23,6 +23,7 @@ import '@illinois-toolkit/ilw-page-title';
 import '@illinois-toolkit/ilw-pagination';
 import '@illinois-toolkit/ilw-profile-card';
 import '@illinois-toolkit/ilw-quote';
+import '@illinois-toolkit/ilw-quote/ilw-quote.css';
 import '@illinois-toolkit/ilw-section-nav';
 import '@illinois-toolkit/ilw-spacer';
 import '@illinois-toolkit/ilw-statistic';
