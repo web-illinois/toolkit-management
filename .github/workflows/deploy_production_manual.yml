@@ -31,10 +31,10 @@ jobs:
         aws-region: us-east-2
 
     - name: Deploy ilw-global to S3 bucket for version
-      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/ilw-global/$VERSION --delete --acl bucket-owner-full-control
+      run: aws s3 sync ./dist/ s3://cdn.toolkit.illinois.edu/content/ilw-global/$VERSION --delete --acl bucket-owner-full-control --content-type "text/css; charset=utf-8;"
     - name: Invalidate ilw-global Cloudfront cache for version
       run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/ilw-global/$VERSION*"
     - name: Deploy toolbox to S3 bucket for version
-      run: aws s3 sync ./dist-toolkit/ s3://cdn.toolkit.illinois.edu/content/$VERSION --delete --acl bucket-owner-full-control
+      run: aws s3 sync ./dist-toolkit/ s3://cdn.toolkit.illinois.edu/content/$VERSION --delete --acl bucket-owner-full-control --content-type "text/css; charset=utf-8;"
     - name: Invalidate toolbox Cloudfront cache for version
       run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$VERSION*"
