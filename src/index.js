@@ -15,6 +15,7 @@ import '@illinois-toolkit/ilw-footer';
 import '@illinois-toolkit/ilw-footer/ilw-footer.css';
 import '@illinois-toolkit/ilw-grid';
 import '@illinois-toolkit/ilw-header';
+import '@illinois-toolkit/ilw-header/ilw-header.css';
 import '@illinois-toolkit/ilw-header-menu';
 import '@illinois-toolkit/ilw-header-menu/ilw-header-menu.css';
 import '@illinois-toolkit/ilw-hero';
