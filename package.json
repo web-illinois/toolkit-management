@@ -1,6 +1,6 @@
 {
   "name": "@illinois-toolkit/toolkit-management",
-  "version": "3.5.0",
+  "version": "3.5.4",
   "description": "Global CSS and JS for toolkit",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "vite": "^5.4.2"
   },
   "dependencies": {
-    "@illinois-toolkit/ilw-accordion": "1.1.0",
+    "@illinois-toolkit/ilw-accordion": "1.1.1",
     "@illinois-toolkit/ilw-award-list": "1.0.0",
     "@illinois-toolkit/ilw-back-to-top": "1.1.0",
     "@illinois-toolkit/ilw-breadcrumbs": "1.1.1",
