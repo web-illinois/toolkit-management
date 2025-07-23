@@ -32,4 +32,5 @@ import '@illinois-toolkit/ilw-section-nav';
 import '@illinois-toolkit/ilw-spacer';
 import '@illinois-toolkit/ilw-statistic';
 import '@illinois-toolkit/ilw-tabs';
+import '@illinois-toolkit/ilw-tooltip';
 import '@illinois-toolkit/ilw-video';
