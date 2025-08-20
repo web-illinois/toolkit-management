@@ -52,6 +52,16 @@
                 "ilw-theme-blue-2",
                 "ilw-theme-orange-2"
             ]
+        },
+        {
+            "name": "size",
+            "description": "Button size",
+            "depreciated": false,
+            "values": [
+                "",
+                "ilw-button-small",
+                "ilw-button-large"
+            ]
         }
     ],
     "css-variables": []

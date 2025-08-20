@@ -11,6 +11,8 @@ import '@illinois-toolkit/ilw-card';
 import '@illinois-toolkit/ilw-carousel';
 import '@illinois-toolkit/ilw-columns';
 import '@illinois-toolkit/ilw-content';
+import '@illinois-toolkit/ilw-filter';
+import '@illinois-toolkit/ilw-filter/ilw-filter.css';
 import '@illinois-toolkit/ilw-footer';
 import '@illinois-toolkit/ilw-footer/ilw-footer.css';
 import '@illinois-toolkit/ilw-grid';
