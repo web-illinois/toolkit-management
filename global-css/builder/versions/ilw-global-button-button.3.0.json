@@ -61,7 +61,8 @@
             "depreciated": false,
             "values": [
                 "",
-                "ilw-size-large"
+                "ilw-button-large",
+                "ilw-button-small"
             ]
         }
     ],
