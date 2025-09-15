@@ -7,7 +7,7 @@
     "build": "npm run css-minify && npm run concat && npm run vite",
     "vite": "vite build --emptyOutDir",
     "css-minify": "css-minify -d global-css/src/ -o dist",
-    "concat": "concat -o dist/ilw-global.css dist/_import.min.css dist/root.min.css dist/buttons.min.css dist/image-cover.min.css dist/icon.min.css dist/screen-reader.min.css"
+    "concat": "concat -o dist/ilw-global.css dist/_import.min.css dist/root.min.css dist/colors.min.css dist/buttons.min.css dist/image-cover.min.css dist/icon.min.css dist/screen-reader.min.css"
   },
   "files": [
     "dist"
