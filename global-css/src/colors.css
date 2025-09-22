@@ -19,6 +19,7 @@
     --il-arches-50: #277cab;
     --il-arches-60: #196389;
 }
+
 @layer base {
     :root {
         --ilw-color--white--background: #ffffff;
@@ -27,13 +28,14 @@
         --ilw-color--white--border-light: var(--il-storm-80);
         --ilw-color--white--link: var(--il-industrial);
         --ilw-color--white--link-hover: var(--il-altgeld);
+        --ilw-color--white--link-visited: #000000;
         --ilw-color--white--heading: var(--il-blue);
         --ilw-color--white--heading-link: var(--il-blue);
         --ilw-color--white--heading-link-hover: var(--il-altgeld);
+        --ilw-color--white--heading-link-visited: #000000;
         --ilw-color--white--control: #ffffff;
         --ilw-color--white--control-text: var(--il-blue);
         --ilw-color--white--control-accent: var(--il-orange);
-        --ilw-color--white--control-accent2: var(--il-orange);
         --ilw-color--white--control-accent-text: #ffffff;
 
         --ilw-color--background: var(--ilw-color--white--background);
@@ -42,18 +44,15 @@
         --ilw-color--border-light: var(--ilw-color--white--border-light);
         --ilw-color--link: var(--ilw-color--white--link);
         --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+        --ilw-color--link-visited: var(--ilw-color--white--link-visited);
         --ilw-color--heading: var(--ilw-color--white--heading);
         --ilw-color--heading-link: var(--ilw-color--white--heading-link);
         --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover);
+        --ilw-color--heading-link-visited: var(--ilw-color--white--heading-link-visited);
         --ilw-color--control: var(--ilw-color--white--control);
         --ilw-color--control-text: var(--ilw-color--white--control-text);
         --ilw-color--control-accent: var(--ilw-color--white--control-accent);
-        --ilw-color--control-accent2: var(--ilw-color--white--control-accent2);
         --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
-
-        --ilw-color--focus--background: var(--il-arches-90);
-        --ilw-color--focus--text: var(--il-blue);
-        --ilw-color--focus--outline: var(--il-blue);
 
         --ilw-color--blue--background: var(--il-blue);
         --ilw-color--blue--text: #ffffff;
@@ -61,13 +60,35 @@
         --ilw-color--blue--border-light: var(--il-storm-80);
         --ilw-color--blue--link: #ffffff;
         --ilw-color--blue--link-hover: var(--il-orange);
+        --ilw-color--blue--link-visited: #ffffff;
         --ilw-color--blue--heading: #ffffff;
         --ilw-color--blue--heading-link: #ffffff;
         --ilw-color--blue--heading-link-hover: var(--il-orange);
+        --ilw-color--blue--heading-link-visited: #ffffff;
         --ilw-color--blue--control: var(--il-blue);
         --ilw-color--blue--control-text: #ffffff;
         --ilw-color--blue--control-accent: var(--il-orange);
         --ilw-color--blue--control-accent-text: #ffffff;
+
+        --ilw-color--orange--background: var(--il-orange);
+        --ilw-color--orange--text: var(--il-blue);
+        --ilw-color--orange--border: var(--il-storm);
+        --ilw-color--orange--border-light: var(--il-storm-80);
+        --ilw-color--orange--link: var(--il-blue);
+        --ilw-color--orange--link-hover: #000000;
+        --ilw-color--orange--link-visited: var(--il-storm-10);
+        --ilw-color--orange--heading: #ffffff;
+        --ilw-color--orange--heading-link: #ffffff;
+        --ilw-color--orange--heading-link-hover: var(--il-blue);
+        --ilw-color--orange--heading-link-visited: var(--il-storm-10);
+        --ilw-color--orange--control: var(--il-orange);
+        --ilw-color--orange--control-text: #ffffff;
+        --ilw-color--orange--control-accent: var(--il-blue);
+        --ilw-color--orange--control-accent-text: #ffffff;
+
+        --ilw-color--focus--background: var(--il-arches-90);
+        --ilw-color--focus--text: var(--il-blue);
+        --ilw-color--focus--outline: var(--il-blue);
 
         --ilw-color--gray--background: var(--il-storm-95);
         --ilw-color--gray--text: var(--il-storm-10);
@@ -75,9 +96,11 @@
         --ilw-color--gray--border-light: var(--il-storm-80);
         --ilw-color--gray--link: var(--il-industrial);
         --ilw-color--gray--link-hover: var(--il-altgeld);
+        --ilw-color--gray--link-visited: #000000;
         --ilw-color--gray--heading: var(--il-blue);
         --ilw-color--gray--heading-link: var(--il-blue);
         --ilw-color--gray--heading-link-hover: var(--il-altgeld);
+        --ilw-color--gray--heading-link-visited: #000000;
         --ilw-color--gray--control: #ffffff;
         --ilw-color--gray--control-text: var(--il-blue);
         --ilw-color--gray--control-accent: var(--il-orange);
@@ -89,27 +112,15 @@
         --ilw-color--bluegrad--border-light: var(--il-storm-80);
         --ilw-color--bluegrad--link: #ffffff;
         --ilw-color--bluegrad--link-hover: var(--il-arches-90);
+        --ilw-color--bluegrad--link-visited: #ffffff;
         --ilw-color--bluegrad--heading: #ffffff;
         --ilw-color--bluegrad--heading-link: #ffffff;
         --ilw-color--bluegrad--heading-link-hover: var(--il-arches-90);
+        --ilw-color--bluegrad--heading-link-visited: #ffffff;
         --ilw-color--bluegrad--control: var(--il-blue);
         --ilw-color--bluegrad--control-text: #ffffff;
         --ilw-color--bluegrad--control-accent: var(--il-orange);
         --ilw-color--bluegrad--control-accent-text: #ffffff;
-
-        --ilw-color--orange--background: var(--il-orange);
-        --ilw-color--orange--text: var(--il-blue);
-        --ilw-color--orange--border: var(--il-storm);
-        --ilw-color--orange--border-light: var(--il-storm-80);
-        --ilw-color--orange--link: var(--il-blue);
-        --ilw-color--orange--link-hover: #000000;
-        --ilw-color--orange--heading: #ffffff;
-        --ilw-color--orange--heading-link: #ffffff;
-        --ilw-color--orange--heading-link-hover: var(--il-blue);
-        --ilw-color--orange--control: var(--il-orange);
-        --ilw-color--orange--control-text: #ffffff;
-        --ilw-color--orange--control-accent: var(--il-blue);
-        --ilw-color--orange--control-accent-text: #ffffff;
 
         --ilw-color--orangegrad--background: linear-gradient(135deg, #FCB316 0%, #FD890E 18.89%, #FF5F05 80.81%);
         --ilw-color--orangegrad--text: var(--il-blue);
@@ -117,13 +128,16 @@
         --ilw-color--orangegrad--border-light: var(--il-storm-80);
         --ilw-color--orangegrad--link: var(--il-blue);
         --ilw-color--orangegrad--link-hover: #000000;
+        --ilw-color--orangegrad--link-visited: #000000;
         --ilw-color--orangegrad--heading: var(--il-blue);
         --ilw-color--orangegrad--heading-link: var(--il-blue);
         --ilw-color--orangegrad--heading-link-hover: #000000;
+        --ilw-color--orangegrad--heading-link-visited: #000000;
         --ilw-color--orangegrad--control: var(--il-orange);
         --ilw-color--orangegrad--control-text: #ffffff;
         --ilw-color--orangegrad--control-accent: var(--il-blue);
         --ilw-color--orangegrad--control-accent-text: #ffffff;
+
     }
 }
 [theme="white"] {
@@ -139,7 +153,6 @@
     --ilw-color--control: var(--ilw-color--white--control);
     --ilw-color--control-text: var(--ilw-color--white--control-text);
     --ilw-color--control-accent: var(--ilw-color--white--control-accent);
-    --ilw-color--control-accent2: var(--ilw-color--white--control-accent2);
     --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
 }
 [theme="blue"] {
