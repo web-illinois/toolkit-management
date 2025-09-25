@@ -75,6 +75,9 @@ Fix remaining issues:
    1. `"test:axe": "playwright test",`
    2. `"test:axe:github": "playwright test --config playwright.ci.config.ts",`
 6. Run npm install and npm playwright install
+7. Add the following to `.gitignore`:
+   1. `test-results/`
+   2. `playwright-report/`
 
 ```html
 <script type="module">
