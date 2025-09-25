@@ -67,13 +67,13 @@ Fix remaining issues:
 2. Create a `samples/variations.html` with a few sample components with unique IDs, but none of the configurable attributes.
 3. Use `createVariations` at the bottom of the HTML file. See below for a sample.
 4. Add the necessary dependencies:
-   1. "@illinois-toolkit/ilw-core": "^1.0.2",
-   2. "@axe-core/playwright": "^4.10.2",
-   3. "@playwright/test": "^1.54.1",
-   4. "playwright": "^1.54.1",
+   1. `"@illinois-toolkit/ilw-core": "^1.0.2",`
+   2. `"@axe-core/playwright": "^4.10.2",`
+   3. `"@playwright/test": "^1.54.1",`
+   4. `"playwright": "^1.54.1",`
 5. Add the test scripts:
-   1. "test:axe": "playwright test",
-   2. "test:axe:github": "playwright test --config playwright.ci.config.ts",
+   1. `"test:axe": "playwright test",`
+   2. `"test:axe:github": "playwright test --config playwright.ci.config.ts",`
 6. Run npm install and npm playwright install
 
 ```html
