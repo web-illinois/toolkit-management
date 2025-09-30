@@ -1,25 +1,3 @@
-:root {
-    --il-orange-40: #a72f10;
-    --il-blue-30: #2f4668;
-    --il-blue-50: #4877b8;
-    --il-blue-70: #98afd2;
-    --il-blue-90: #e1e7f1;
-    --il-blue-15: #000333;
-    --il-blue-10: #11181d;
-    --il-storm-60: #8e9090;
-    --il-storm-70: #AAABAB;
-    --il-storm-80: #C6C7C6;
-    --il-storm-95: #F4F4F4;
-    --il-storm-30: #474948;
-    --il-storm-10: #252525;
-    --il-arches-70: #55b6d4;
-    --il-arches-80: #8dd1eb;
-    --il-arches-90: #c7edf8;
-    --il-arches-95: #e9f6fb;
-    --il-arches-50: #277cab;
-    --il-arches-60: #196389;
-}
-
 @layer base {
     :root {
         --ilw-color--white--background: #ffffff;
@@ -147,9 +125,11 @@
     --ilw-color--border-light: var(--ilw-color--white--border-light);
     --ilw-color--link: var(--ilw-color--white--link);
     --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--white--link-visited);
     --ilw-color--heading: var(--ilw-color--white--heading);
     --ilw-color--heading-link: var(--ilw-color--white--heading-link);
     --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--white--heading-link-visited);
     --ilw-color--control: var(--ilw-color--white--control);
     --ilw-color--control-text: var(--ilw-color--white--control-text);
     --ilw-color--control-accent: var(--ilw-color--white--control-accent);
@@ -162,9 +142,11 @@
     --ilw-color--border-light: var(--ilw-color--blue--border-light);
     --ilw-color--link: var(--ilw-color--blue--link);
     --ilw-color--link-hover: var(--ilw-color--blue--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--blue--link-visited);
     --ilw-color--heading: var(--ilw-color--blue--heading);
     --ilw-color--heading-link: var(--ilw-color--blue--heading-link);
     --ilw-color--heading-link-hover: var(--ilw-color--blue--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--blue--heading-link-visited);
     --ilw-color--control: var(--ilw-color--blue--control);
     --ilw-color--control-text: var(--ilw-color--blue--control-text);
     --ilw-color--control-accent: var(--ilw-color--blue--control-accent);
@@ -177,9 +159,11 @@
     --ilw-color--border-light: var(--ilw-color--gray--border-light);
     --ilw-color--link: var(--ilw-color--gray--link);
     --ilw-color--link-hover: var(--ilw-color--gray--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--gray--link-visited);
     --ilw-color--heading: var(--ilw-color--gray--heading);
     --ilw-color--heading-link: var(--ilw-color--gray--heading-link);
     --ilw-color--heading-link-hover: var(--ilw-color--gray--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--gray--heading-link-visited);
     --ilw-color--control: var(--ilw-color--gray--control);
     --ilw-color--control-text: var(--ilw-color--gray--control-text);
     --ilw-color--control-accent: var(--ilw-color--gray--control-accent);
@@ -192,9 +176,11 @@
     --ilw-color--border-light: var(--ilw-color--bluegrad--border-light);
     --ilw-color--link: var(--ilw-color--bluegrad--link);
     --ilw-color--link-hover: var(--ilw-color--bluegrad--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--bluegrad--link-visited);
     --ilw-color--heading: var(--ilw-color--bluegrad--heading);
     --ilw-color--heading-link: var(--ilw-color--bluegrad--heading-link);
     --ilw-color--heading-link-hover: var(--ilw-color--bluegrad--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--bluegrad--heading-link-visited);
     --ilw-color--control: var(--ilw-color--bluegrad--control);
     --ilw-color--control-text: var(--ilw-color--bluegrad--control-text);
     --ilw-color--control-accent: var(--ilw-color--bluegrad--control-accent);
@@ -207,9 +193,11 @@
     --ilw-color--border-light: var(--ilw-color--orange--border-light);
     --ilw-color--link: var(--ilw-color--orange--link);
     --ilw-color--link-hover: var(--ilw-color--orange--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--orange--link-visited);
     --ilw-color--heading: var(--ilw-color--orange--heading);
     --ilw-color--heading-link: var(--ilw-color--orange--heading-link);
     --ilw-color--heading-link-hover: var(--ilw-color--orange--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--orange--heading-link-visited);
     --ilw-color--control: var(--ilw-color--orange--control);
     --ilw-color--control-text: var(--ilw-color--orange--control-text);
     --ilw-color--control-accent: var(--ilw-color--orange--control-accent);
@@ -222,9 +210,11 @@
     --ilw-color--border-light: var(--ilw-color--orangegrad--border-light);
     --ilw-color--link: var(--ilw-color--orangegrad--link);
     --ilw-color--link-hover: var(--ilw-color--orangegrad--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--orangegrad--link-visited);
     --ilw-color--heading: var(--ilw-color--orangegrad--heading);
     --ilw-color--heading-link: var(--ilw-color--orangegrad--heading-link);
     --ilw-color--heading-link-hover: var(--ilw-color--orangegrad--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--orangegrad--heading-link-visited);
     --ilw-color--control: var(--ilw-color--orangegrad--control);
     --ilw-color--control-text: var(--ilw-color--orangegrad--control-text);
     --ilw-color--control-accent: var(--ilw-color--orangegrad--control-accent);
