@@ -101,6 +101,8 @@ Fix remaining issues:
 
 ## Vitest
 
+**Note** that the Test workflow will fail if there are no tests. If you're not planning on writing tests, you can add a `test` script into `package.json` that doesn't do anything. Another option is to add `passWithNoTests: true` to `vitest.config.ts`.
+
 1. Copy vitest.config.ts from ilw-filter to the repository.
 2. Add the necessary devDependencies:
    1. `"@vitest/browser": "^3.2.4",`
