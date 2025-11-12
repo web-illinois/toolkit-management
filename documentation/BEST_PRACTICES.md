@@ -67,8 +67,8 @@ Bad:
 
 Good:
 ````
-:root { ilw-hero-margin: 10px auto; }
-ilw-hero div.background { margin: var(--ilw-hero-margin); }
+:root { ilw-hero--margin: 10px auto; }
+ilw-hero div.background { margin: var(--ilw-hero--margin); }
 ````
 
 Bad:
