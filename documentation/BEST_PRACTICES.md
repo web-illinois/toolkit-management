@@ -77,11 +77,12 @@ ilw-hero div.background { background: var(--il-blue); }
 ````
 
 ### Recommended Attribute Names
-* **Theme:** white, blue, orange, gray, blue-gradient, orange-gradient, industrial, arches (industrial and arches will default to blue, but use the appropriate accent color).
+* **Theme:** white, blue, orange, gray, blue-gradient, orange-gradient
 * **Size:** xx-small, x-small, small, medium, large, x-large, xx-large
 * **Width** (how wide a component will be): full, auto, page
 * **Align** (where an item goes in a space): left, center, right, top, bottom, top-left, top-right, bottom-left, bottom-right
-* **Padding** (padding around the item): should use the standard length / percentage CSS. 
+* **Padding** (padding around the item): should use the standard length / percentage CSS.
+* **Accent** (accent color): white, blue, orange, gray, industrial, arches
 
 #### The Width attribute
 
