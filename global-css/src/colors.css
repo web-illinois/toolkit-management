@@ -118,7 +118,7 @@
 
     }
 }
-[theme="white"] {
+[theme="white"], .ilw-theme-blue, .ilw-theme-blue-outline {
     --ilw-color--background: var(--ilw-color--white--background);
     --ilw-color--text: var(--ilw-color--white--text);
     --ilw-color--border: var(--ilw-color--white--border);
@@ -135,7 +135,7 @@
     --ilw-color--control-accent: var(--ilw-color--white--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
 }
-[theme="blue"] {
+[theme="blue"], .ilw-theme-blue-1, .ilw-theme-blue-2, .ilw-theme-blue-solid, .ilw-theme-blue-inverse {
     --ilw-color--background: var(--ilw-color--blue--background);
     --ilw-color--text: var(--ilw-color--blue--text);
     --ilw-color--border: var(--ilw-color--blue--border);
@@ -152,6 +152,7 @@
     --ilw-color--control-accent: var(--ilw-color--blue--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--blue--control-accent-text);
 }
+
 [theme="gray"] {
     --ilw-color--background: var(--ilw-color--gray--background);
     --ilw-color--text: var(--ilw-color--gray--text);
@@ -186,7 +187,7 @@
     --ilw-color--control-accent: var(--ilw-color--bluegrad--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--bluegrad--control-accent-text);
 }
-[theme="orange"] {
+[theme="orange"], .ilw-theme-orange-1, .ilw-theme-orange-2, .ilw-theme-orange-solid, .ilw-theme-orange-inverse {
     --ilw-color--background: var(--ilw-color--orange--background);
     --ilw-color--text: var(--ilw-color--orange--text);
     --ilw-color--border: var(--ilw-color--orange--border);
@@ -203,6 +204,12 @@
     --ilw-color--control-accent: var(--ilw-color--orange--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--orange--control-accent-text);
 }
+
+.ilw-theme-orange, .ilw-theme-orange-outline {
+    --ilw-color--control: var(--ilw-color--orange--control-text);
+    --ilw-color--control-text: var(--ilw-color--orange--control);
+}
+
 [theme="orange-gradient"] {
     --ilw-color--background: var(--ilw-color--orangegrad--background);
     --ilw-color--text: var(--ilw-color--orangegrad--text);

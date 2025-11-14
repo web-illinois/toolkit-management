@@ -5,9 +5,9 @@
     "type": "stylesheet",
     "element-name": "a",
     "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'a' element.",
-    "builder-version": "3.0-beta",
-    "version": "3.0.0-beta",
-    "date": "9/13/2024",
+    "builder-version": "latest",
+    "version": "3.7.1-beta",
+    "date": "11/14/2025",
     "css": "",
     "js": "",
     "production": false,
@@ -45,12 +45,12 @@
             "depreciated": false,
             "values": [
                 "",
-                "ilw-theme-blue",
-                "ilw-theme-orange",
-                "ilw-theme-blue-1",
-                "ilw-theme-orange-1",
-                "ilw-theme-blue-2",
-                "ilw-theme-orange-2"
+                "ilw-theme-blue-outline",
+                "ilw-theme-orange-outline",
+                "ilw-theme-blue-solid",
+                "ilw-theme-orange-solid",
+                "ilw-theme-blue-inverse",
+                "ilw-theme-orange-inverse"
             ]
         }
     ],
