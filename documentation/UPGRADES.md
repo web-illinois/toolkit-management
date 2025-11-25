@@ -63,58 +63,68 @@ Fix remaining issues:
 
 ## axe-core tests
 
-1. Copy the `test-axe` folder, as well as `playwright.config.ts` and `playwright.ci.config.ts` from ilw-filter to the project root.
-2. Create a `samples/variations.html` with a few sample components with unique IDs, but none of the configurable attributes.
-3. Use `createVariations` at the bottom of the HTML file. See below for a sample.
-4. Add the necessary dependencies:
-   1. `"@illinois-toolkit/ilw-core": "^1.0.2",`
-   2. `"@axe-core/playwright": "^4.10.2",`
-   3. `"@playwright/test": "^1.54.1",`
-   4. `"playwright": "^1.54.1",`
-5. Add the test scripts:
-   1. `"test:axe": "playwright test",`
-   2. `"test:axe:github": "playwright test --config playwright.ci.config.ts",`
-6. Run npm install and npm playwright install
-7. Add the following to `.gitignore`:
-   1. `test-results/`
-   2. `playwright-report/`
-
+1. Copy the `test-axe` folder, as well as `playwright.config.ts` and `playwright.ci.config.ts` from [ilw-filter](https://github.com/web-illinois/ilw-filter) to the project root.
+2. Create a `samples/variations.html` with a few sample components with unique IDs, but none of the configurable attributes. [See ilw-card/samples/variations.html](https://github.com/web-illinois/ilw-card/blob/main/samples/variations.html).
+3. Use `createVariations` at the bottom of the HTML file to create combinations of the configurable attributes automatically.
 ```html
 <script type="module">
-    import { createVariations } from "@illinois-toolkit/ilw-core";
-    import Card from "../src/ilw-card.js";
+    import { createVariations } from "@illinois-toolkit/ilw-core"; //a utility function provided by the illinois toolkit
+    import Card from "../src/ilw-card.js"; //import the component from your local src
 
-    createVariations(document.getElementById("grid"), Card, {
+    createVariations(
+      document.getElementById("grid"), //container element
+      Card,                            //component to test
+      { 
+        // options to vary
         theme: ["white", "gray", "orange", "blue", "orange-gradient", "blue-gradient"],
         clickable: [true, undefined],
         align: ["left", "center"],
         aspectRatio: [undefined, "16/9", "4/3", "1/1"],
         tag: ["article", "div"],
-    }, [
-        "plain-card",
-        "image-card",
-        "footer-card",
-        "icon-card"
-    ]);
+      }, 
+        ["plain-card","image-card","footer-card","icon-card"] //unique IDs
+    );
 </script>
 ```
+4. Add the necessary dependencies by running:
+``` 
+        npm install @illinois-toolkit/ilw-core@^1.0.2 \
+                    @axe-core/playwright@^4.10.2 \
+                    @playwright/test@^1.54.1 \
+                    playwright@^1.54.1
+```
+5. Add the test scripts to your package.json:
+```
+    "scripts": {
+        "test:axe": "playwright test",
+        "test:axe:github": "playwright test --config playwright.ci.config.ts"
+    }
+```
+6. Run `npm install` and `npm playwright install`
+7. Add the following to `.gitignore`:
+```
+test-results/
+playwright-report/
+```
+
+
 
 ## Vitest
 
 **Note** that the Test workflow will fail if there are no tests. If you're not planning on writing tests, you can add a `test` script into `package.json` that doesn't do anything. Another option is to add `passWithNoTests: true` to `vitest.config.ts`.
 
-1. Copy vitest.config.ts from ilw-filter to the repository.
+1. Copy vitest.config.ts from [ilw-filter](https://github.com/web-illinois/ilw-filter) to the repository.
 2. Add the necessary devDependencies:
    1. `"@vitest/browser": "^3.2.4",`
    2. `"vitest-browser-lit": "^0.1.0"`
 3. Add the test scripts to package.json:
    1. `"test": "vitest run --browser.headless",`
    2. `"test: browser": "vitest browser --browser chromium"`
-4. Create a test folder and add tests to it. You can refer to ilw-filter `tests/ilw-filter.test.ts` for a basic example.
+4. Create a test folder and add tests to it. You can refer to ilw-filter [tests/ilw-filter.test.ts](https://github.com/web-illinois/ilw-filter/blob/main/test/ilw-filter.test.ts) for a basic example.
 
 ## GitHub Actions with tests
 
-1. Copy `deploy.yml` and `test.yml` from ilw-filter to `.github/workflows`
+1. Copy `deploy.yml` and `test.yml` from [ilw-filter](https://github.com/web-illinois/ilw-filter) to `.github/workflows`
 2. Remove `publish_npm.yml`
 
 ## Semantic Colors
