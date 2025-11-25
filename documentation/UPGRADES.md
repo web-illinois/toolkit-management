@@ -100,7 +100,7 @@ Fix remaining issues:
         "test:axe:github": "playwright test --config playwright.ci.config.ts"
     }
 ```
-6. Run `npm install` and `npm playwright install`
+6. Run `npm install` and `npx playwright install`
 7. Add the following to `.gitignore`:
 ```
 test-results/
