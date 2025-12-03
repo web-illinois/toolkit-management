@@ -4,10 +4,17 @@
     <title>Test Styles</title>
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
     <link rel="stylesheet" href="src/root.css"></link>
+    <link rel="stylesheet" href="src/colors.css"></link>
     <link rel="stylesheet" href="src/buttons.css"></link>
     <link rel="stylesheet" href="src/image-cover.css"></link>
     <link rel="stylesheet" href="src/icon.css"></link>
     <link rel="stylesheet" href="src/screen-reader.css"></link>
+    <style>
+        div[theme] {
+            background: #777; 
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,6 +105,45 @@
             <div>Some text here</div>
         </div>
     </div>
+
+    <h2>Theme Content</h2>
+    <div theme="white">
+        <a href="#" class="ilw-button">Test Link White Theme</a>
+    </div>
+    <div theme="gray">
+        <a href="#" class="ilw-button">Test Link Gray Theme</a>
+    </div>
+    <div theme="blue">
+        <a href="#" class="ilw-button">Test Link Blue Theme</a>
+    </div>
+    <div theme="orange">
+        <a href="#" class="ilw-button">Test Link Orange Theme</a>
+    </div>
+    <div theme="blue-gradient">
+        <a href="#" class="ilw-button">Test Link Blue-Gradient Theme</a>
+    </div>
+    <div theme="orange-gradient">
+        <a href="#" class="ilw-button">Test Link Orange-Gradient Text</a>
+    </div>
+    <div theme="blue">
+        <ul class="ilw-buttons">
+        <li><a href="#">Test Blue Theme Link 1</a></li>
+        <li><a href="#" class="ilw-theme-orange">Test Blue Theme Link 2</a></li>
+        <li><a href="#" class="ilw-theme-blue">Test Blue Theme Link 3</a></li>
+        <li><a href="#" class="ilw-theme-orange-1">Test Blue Theme Link 4</a></li>
+        </ul>
+    </div>
+
+    <h2>New Theme Names</h2>
+    <div style="background: #777; padding: 20px;">
+    <div><a href="#" class="ilw-button ilw-theme-blue-outline">Blue Outline</a></div>
+    <div><a href="#" class="ilw-button ilw-theme-orange-outline">Orange Outline</a></div>
+    <div><a href="#" class="ilw-button ilw-theme-blue-solid">Blue Solid</a></div>
+    <div><a href="#" class="ilw-button ilw-theme-orange-solid">Orange Solid</a></div>
+    <div><a href="#" class="ilw-button ilw-theme-blue-inverse">Blue Inverse</a></div>
+    <div><a href="#" class="ilw-button ilw-theme-orange-inverse">Orange Inverse</a></div>
+    </div>
+
 </body>
 
 </html>

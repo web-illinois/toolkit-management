@@ -1,0 +1,229 @@
+@layer base {
+    :root {
+        --ilw-color--white--background: #ffffff;
+        --ilw-color--white--text: var(--il-storm-10);
+        --ilw-color--white--border: var(--il-storm);
+        --ilw-color--white--border-light: var(--il-storm-80);
+        --ilw-color--white--link: var(--il-industrial);
+        --ilw-color--white--link-hover: var(--il-altgeld);
+        --ilw-color--white--link-visited: #000000;
+        --ilw-color--white--heading: var(--il-blue);
+        --ilw-color--white--heading-link: var(--il-blue);
+        --ilw-color--white--heading-link-hover: var(--il-altgeld);
+        --ilw-color--white--heading-link-visited: #000000;
+        --ilw-color--white--control: #ffffff;
+        --ilw-color--white--control-text: var(--il-blue);
+        --ilw-color--white--control-accent: var(--il-orange);
+        --ilw-color--white--control-accent-text: #ffffff;
+
+        --ilw-color--background: var(--ilw-color--white--background);
+        --ilw-color--text: var(--ilw-color--white--text);
+        --ilw-color--border: var(--ilw-color--white--border);
+        --ilw-color--border-light: var(--ilw-color--white--border-light);
+        --ilw-color--link: var(--ilw-color--white--link);
+        --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+        --ilw-color--link-visited: var(--ilw-color--white--link-visited);
+        --ilw-color--heading: var(--ilw-color--white--heading);
+        --ilw-color--heading-link: var(--ilw-color--white--heading-link);
+        --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover);
+        --ilw-color--heading-link-visited: var(--ilw-color--white--heading-link-visited);
+        --ilw-color--control: var(--ilw-color--white--control);
+        --ilw-color--control-text: var(--ilw-color--white--control-text);
+        --ilw-color--control-accent: var(--ilw-color--white--control-accent);
+        --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
+
+        --ilw-color--blue--background: var(--il-blue);
+        --ilw-color--blue--text: #ffffff;
+        --ilw-color--blue--border: var(--il-storm);
+        --ilw-color--blue--border-light: var(--il-storm-80);
+        --ilw-color--blue--link: #ffffff;
+        --ilw-color--blue--link-hover: var(--il-orange);
+        --ilw-color--blue--link-visited: #ffffff;
+        --ilw-color--blue--heading: #ffffff;
+        --ilw-color--blue--heading-link: #ffffff;
+        --ilw-color--blue--heading-link-hover: var(--il-orange);
+        --ilw-color--blue--heading-link-visited: #ffffff;
+        --ilw-color--blue--control: var(--il-blue);
+        --ilw-color--blue--control-text: #ffffff;
+        --ilw-color--blue--control-accent: var(--il-orange);
+        --ilw-color--blue--control-accent-text: #ffffff;
+
+        --ilw-color--orange--background: var(--il-orange);
+        --ilw-color--orange--text: var(--il-blue);
+        --ilw-color--orange--border: var(--il-storm);
+        --ilw-color--orange--border-light: var(--il-storm-80);
+        --ilw-color--orange--link: var(--il-blue);
+        --ilw-color--orange--link-hover: #000000;
+        --ilw-color--orange--link-visited: var(--il-storm-10);
+        --ilw-color--orange--heading: #ffffff;
+        --ilw-color--orange--heading-link: #ffffff;
+        --ilw-color--orange--heading-link-hover: var(--il-blue);
+        --ilw-color--orange--heading-link-visited: var(--il-storm-10);
+        --ilw-color--orange--control: var(--il-orange);
+        --ilw-color--orange--control-text: #ffffff;
+        --ilw-color--orange--control-accent: var(--il-blue);
+        --ilw-color--orange--control-accent-text: #ffffff;
+
+        --ilw-color--focus--background: var(--il-arches-90);
+        --ilw-color--focus--text: var(--il-blue);
+        --ilw-color--focus--outline: var(--il-blue);
+
+        --ilw-color--gray--background: var(--il-storm-95);
+        --ilw-color--gray--text: var(--il-storm-10);
+        --ilw-color--gray--border: var(--il-storm);
+        --ilw-color--gray--border-light: var(--il-storm-80);
+        --ilw-color--gray--link: var(--il-industrial);
+        --ilw-color--gray--link-hover: var(--il-altgeld);
+        --ilw-color--gray--link-visited: #000000;
+        --ilw-color--gray--heading: var(--il-blue);
+        --ilw-color--gray--heading-link: var(--il-blue);
+        --ilw-color--gray--heading-link-hover: var(--il-altgeld);
+        --ilw-color--gray--heading-link-visited: #000000;
+        --ilw-color--gray--control: #ffffff;
+        --ilw-color--gray--control-text: var(--il-blue);
+        --ilw-color--gray--control-accent: var(--il-orange);
+        --ilw-color--gray--control-accent-text: #ffffff;
+
+        --ilw-color--bluegrad--background: linear-gradient(135deg, #1D58A7 0%, #13294B 100%);
+        --ilw-color--bluegrad--text: #ffffff;
+        --ilw-color--bluegrad--border: var(--il-storm);
+        --ilw-color--bluegrad--border-light: var(--il-storm-80);
+        --ilw-color--bluegrad--link: #ffffff;
+        --ilw-color--bluegrad--link-hover: var(--il-arches-90);
+        --ilw-color--bluegrad--link-visited: #ffffff;
+        --ilw-color--bluegrad--heading: #ffffff;
+        --ilw-color--bluegrad--heading-link: #ffffff;
+        --ilw-color--bluegrad--heading-link-hover: var(--il-arches-90);
+        --ilw-color--bluegrad--heading-link-visited: #ffffff;
+        --ilw-color--bluegrad--control: var(--il-blue);
+        --ilw-color--bluegrad--control-text: #ffffff;
+        --ilw-color--bluegrad--control-accent: var(--il-orange);
+        --ilw-color--bluegrad--control-accent-text: #ffffff;
+
+        --ilw-color--orangegrad--background: linear-gradient(135deg, #FCB316 0%, #FD890E 18.89%, #FF5F05 80.81%);
+        --ilw-color--orangegrad--text: var(--il-blue);
+        --ilw-color--orangegrad--border: var(--il-storm);
+        --ilw-color--orangegrad--border-light: var(--il-storm-80);
+        --ilw-color--orangegrad--link: var(--il-blue);
+        --ilw-color--orangegrad--link-hover: #000000;
+        --ilw-color--orangegrad--link-visited: #000000;
+        --ilw-color--orangegrad--heading: var(--il-blue);
+        --ilw-color--orangegrad--heading-link: var(--il-blue);
+        --ilw-color--orangegrad--heading-link-hover: #000000;
+        --ilw-color--orangegrad--heading-link-visited: #000000;
+        --ilw-color--orangegrad--control: var(--il-orange);
+        --ilw-color--orangegrad--control-text: #ffffff;
+        --ilw-color--orangegrad--control-accent: var(--il-blue);
+        --ilw-color--orangegrad--control-accent-text: #ffffff;
+
+    }
+}
+[theme="white"], .ilw-theme-blue, .ilw-theme-blue-outline {
+    --ilw-color--background: var(--ilw-color--white--background);
+    --ilw-color--text: var(--ilw-color--white--text);
+    --ilw-color--border: var(--ilw-color--white--border);
+    --ilw-color--border-light: var(--ilw-color--white--border-light);
+    --ilw-color--link: var(--ilw-color--white--link);
+    --ilw-color--link-hover: var(--ilw-color--white--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--white--link-visited);
+    --ilw-color--heading: var(--ilw-color--white--heading);
+    --ilw-color--heading-link: var(--ilw-color--white--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--white--heading-link-visited);
+    --ilw-color--control: var(--ilw-color--white--control);
+    --ilw-color--control-text: var(--ilw-color--white--control-text);
+    --ilw-color--control-accent: var(--ilw-color--white--control-accent);
+    --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
+}
+[theme="blue"], .ilw-theme-blue-1, .ilw-theme-blue-2, .ilw-theme-blue-solid, .ilw-theme-blue-inverse {
+    --ilw-color--background: var(--ilw-color--blue--background);
+    --ilw-color--text: var(--ilw-color--blue--text);
+    --ilw-color--border: var(--ilw-color--blue--border);
+    --ilw-color--border-light: var(--ilw-color--blue--border-light);
+    --ilw-color--link: var(--ilw-color--blue--link);
+    --ilw-color--link-hover: var(--ilw-color--blue--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--blue--link-visited);
+    --ilw-color--heading: var(--ilw-color--blue--heading);
+    --ilw-color--heading-link: var(--ilw-color--blue--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--blue--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--blue--heading-link-visited);
+    --ilw-color--control: var(--ilw-color--blue--control);
+    --ilw-color--control-text: var(--ilw-color--blue--control-text);
+    --ilw-color--control-accent: var(--ilw-color--blue--control-accent);
+    --ilw-color--control-accent-text: var(--ilw-color--blue--control-accent-text);
+}
+
+[theme="gray"] {
+    --ilw-color--background: var(--ilw-color--gray--background);
+    --ilw-color--text: var(--ilw-color--gray--text);
+    --ilw-color--border: var(--ilw-color--gray--border);
+    --ilw-color--border-light: var(--ilw-color--gray--border-light);
+    --ilw-color--link: var(--ilw-color--gray--link);
+    --ilw-color--link-hover: var(--ilw-color--gray--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--gray--link-visited);
+    --ilw-color--heading: var(--ilw-color--gray--heading);
+    --ilw-color--heading-link: var(--ilw-color--gray--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--gray--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--gray--heading-link-visited);
+    --ilw-color--control: var(--ilw-color--gray--control);
+    --ilw-color--control-text: var(--ilw-color--gray--control-text);
+    --ilw-color--control-accent: var(--ilw-color--gray--control-accent);
+    --ilw-color--control-accent-text: var(--ilw-color--gray--control-accent-text);
+}
+[theme="blue-gradient"] {
+    --ilw-color--background: var(--ilw-color--bluegrad--background);
+    --ilw-color--text: var(--ilw-color--bluegrad--text);
+    --ilw-color--border: var(--ilw-color--bluegrad--border);
+    --ilw-color--border-light: var(--ilw-color--bluegrad--border-light);
+    --ilw-color--link: var(--ilw-color--bluegrad--link);
+    --ilw-color--link-hover: var(--ilw-color--bluegrad--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--bluegrad--link-visited);
+    --ilw-color--heading: var(--ilw-color--bluegrad--heading);
+    --ilw-color--heading-link: var(--ilw-color--bluegrad--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--bluegrad--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--bluegrad--heading-link-visited);
+    --ilw-color--control: var(--ilw-color--bluegrad--control);
+    --ilw-color--control-text: var(--ilw-color--bluegrad--control-text);
+    --ilw-color--control-accent: var(--ilw-color--bluegrad--control-accent);
+    --ilw-color--control-accent-text: var(--ilw-color--bluegrad--control-accent-text);
+}
+[theme="orange"], .ilw-theme-orange-1, .ilw-theme-orange-2, .ilw-theme-orange-solid, .ilw-theme-orange-inverse {
+    --ilw-color--background: var(--ilw-color--orange--background);
+    --ilw-color--text: var(--ilw-color--orange--text);
+    --ilw-color--border: var(--ilw-color--orange--border);
+    --ilw-color--border-light: var(--ilw-color--orange--border-light);
+    --ilw-color--link: var(--ilw-color--orange--link);
+    --ilw-color--link-hover: var(--ilw-color--orange--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--orange--link-visited);
+    --ilw-color--heading: var(--ilw-color--orange--heading);
+    --ilw-color--heading-link: var(--ilw-color--orange--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--orange--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--orange--heading-link-visited);
+    --ilw-color--control: var(--ilw-color--orange--control);
+    --ilw-color--control-text: var(--ilw-color--orange--control-text);
+    --ilw-color--control-accent: var(--ilw-color--orange--control-accent);
+    --ilw-color--control-accent-text: var(--ilw-color--orange--control-accent-text);
+}
+
+.ilw-theme-orange, .ilw-theme-orange-outline {
+    --ilw-color--control: var(--ilw-color--orange--control-text);
+    --ilw-color--control-text: var(--ilw-color--orange--control);
+}
+
+[theme="orange-gradient"] {
+    --ilw-color--background: var(--ilw-color--orangegrad--background);
+    --ilw-color--text: var(--ilw-color--orangegrad--text);
+    --ilw-color--border: var(--ilw-color--orangegrad--border);
+    --ilw-color--border-light: var(--ilw-color--orangegrad--border-light);
+    --ilw-color--link: var(--ilw-color--orangegrad--link);
+    --ilw-color--link-hover: var(--ilw-color--orangegrad--link-hover);
+    --ilw-color--link-visited: var(--ilw-color--orangegrad--link-visited);
+    --ilw-color--heading: var(--ilw-color--orangegrad--heading);
+    --ilw-color--heading-link: var(--ilw-color--orangegrad--heading-link);
+    --ilw-color--heading-link-hover: var(--ilw-color--orangegrad--heading-link-hover);
+    --ilw-color--heading-link-visited: var(--ilw-color--orangegrad--heading-link-visited);
+    --ilw-color--control: var(--ilw-color--orangegrad--control);
+    --ilw-color--control-text: var(--ilw-color--orangegrad--control-text);
+    --ilw-color--control-accent: var(--ilw-color--orangegrad--control-accent);
+    --ilw-color--control-accent-text: var(--ilw-color--orangegrad--control-accent-text);
+}
