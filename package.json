@@ -1,6 +1,6 @@
 {
   "name": "@illinois-toolkit/toolkit-management",
-  "version": "3.7.1-beta4",
+  "version": "3.7.3",
   "description": "Global CSS and JS for toolkit",
   "main": "index.js",
   "scripts": {
@@ -53,7 +53,7 @@
     "@illinois-toolkit/ilw-icon-panel": "1.0.1-beta",
     "@illinois-toolkit/ilw-modal": "1.1.1",
     "@illinois-toolkit/ilw-page": "1.1.0",
-    "@illinois-toolkit/ilw-page-title": "1.2.0",
+    "@illinois-toolkit/ilw-page-title": "1.2.1",
     "@illinois-toolkit/ilw-pagination": "1.1.2",
     "@illinois-toolkit/ilw-profile": "1.0.0",
     "@illinois-toolkit/ilw-profile-card": "1.0.0",
