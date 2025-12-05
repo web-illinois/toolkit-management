@@ -37,6 +37,7 @@ import '@illinois-toolkit/ilw-modal';
 import '@illinois-toolkit/ilw-modal/ilw-modal.css';
 import '@illinois-toolkit/ilw-page';
 import '@illinois-toolkit/ilw-page-title';
+import '@illinois-toolkit/ilw-page-title/ilw-page-title.css';
 import '@illinois-toolkit/ilw-pagination';
 import '@illinois-toolkit/ilw-profile-card';
 import '@illinois-toolkit/ilw-profile-list';
