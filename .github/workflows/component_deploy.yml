@@ -5,6 +5,9 @@ on:
       COMPONENT_NAME:
         required: true
         type: string
+    secrets:
+      TOOLKIT_AWS_ACCESS_SECRET:
+        required: true
 permissions:
   id-token: write  # Required for NPM Publish OIDC
   contents: read
