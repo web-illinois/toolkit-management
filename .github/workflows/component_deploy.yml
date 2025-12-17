@@ -56,11 +56,11 @@ jobs:
         env:
           GITHUB_BRANCH: ${{ steps.get_version.outputs.prerelease }}
       - name: Display major version install
-        run: echo "Installing major version ${MAJORVERSION} for ${inputs.COMPONENT_NAME}"
+        run: echo "Installing major version ${MAJORVERSION} for ${{inputs.COMPONENT_NAME}}"
       - name: Display minor version install
-        run: echo "Installing minor version ${MINORVERSION} for ${inputs.COMPONENT_NAME}"
+        run: echo "Installing minor version ${MINORVERSION} for ${{inputs.COMPONENT_NAME}}"
       - name: Display patch (full) version install
-        run: echo "Installing patch (full) version ${FULLVERSION} for ${inputs.COMPONENT_NAME}"
+        run: echo "Installing patch (full) version ${FULLVERSION} for ${{inputs.COMPONENT_NAME}}"
       - name: Production run
         if: ${{ steps.get_version.outputs.prerelease == '' }}
         run: echo "Running production deployment"
@@ -86,34 +86,34 @@ jobs:
 
       - name: Deploy toolbox to S3 bucket for major version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MAJORVERSION --delete --acl bucket-owner-full-control
+        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/{{inputs.COMPONENT_NAME}}/$MAJORVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for major version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MAJORVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/{{inputs.COMPONENT_NAME}}/$MAJORVERSION*"
       - name: Deploy toolbox to S3 bucket for minor version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MINORVERSION --delete --acl bucket-owner-full-control
+        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/{{inputs.COMPONENT_NAME}}/$MINORVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for minor version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MINORVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/{{inputs.COMPONENT_NAME}}/$MINORVERSION*"
       - name: Deploy toolbox to S3 bucket for patch (full) version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
+        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/{{inputs.COMPONENT_NAME}}/$FULLVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for patch (full) version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/{{inputs.COMPONENT_NAME}}/$FULLVERSION*"
       - name: Deploy toolbox to S3 bucket for full version dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
+        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/{{inputs.COMPONENT_NAME}}/$FULLVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for full version dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/{{inputs.COMPONENT_NAME}}/$FULLVERSION*"
       - name: Deploy toolbox to S3 bucket for latest dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/latest --delete --acl bucket-owner-full-control
+        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/{{inputs.COMPONENT_NAME}}/latest --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for latest dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/latest*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/{{inputs.COMPONENT_NAME}}/latest*"
 
   publish:
     needs: build_test_deploy
