@@ -5,18 +5,6 @@ on:
       COMPONENT_NAME:
         required: true
         type: string
-      TOOLKIT_AWS_ACCESS_KEY:
-        required: true
-        type: string
-      TOOLKIT_AWS_CLOUDFRONT:
-        required: true
-        type: string
-      TOOLKIT_AWS_CLOUDFRONT_DEV:
-        required: true
-        type: string
-    secrets:
-      TOOLKIT_AWS_ACCESS_SECRET:
-        required: true
 permissions:
   id-token: write  # Required for NPM Publish OIDC
   contents: read
@@ -84,7 +72,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ inputs.TOOLKIT_AWS_ACCESS_KEY }}
+          aws-access-key-id: ${{ vars.TOOLKIT_AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
           aws-region: us-east-2
 
@@ -93,31 +81,31 @@ jobs:
         run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MAJORVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for major version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MAJORVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MAJORVERSION*"
       - name: Deploy toolbox to S3 bucket for minor version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
         run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MINORVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for minor version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MINORVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MINORVERSION*"
       - name: Deploy toolbox to S3 bucket for patch (full) version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
         run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for patch (full) version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
       - name: Deploy toolbox to S3 bucket for full version dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
         run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for full version dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
       - name: Deploy toolbox to S3 bucket for latest dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
         run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/latest --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for latest dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ inputs.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/latest*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/latest*"
 
   publish:
     needs: build_test_deploy
