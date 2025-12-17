@@ -1,4 +1,4 @@
-name: component-deploy
+name: component_deploy
 on:
   workflow_call:
     inputs:
