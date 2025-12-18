@@ -1,0 +1,125 @@
+name: component_deploy
+on:
+  workflow_call:
+    inputs:
+      COMPONENT_NAME:
+        required: true
+        type: string
+    secrets:
+      TOOLKIT_AWS_ACCESS_SECRET:
+        required: true
+permissions:
+  id-token: write  # Required for NPM Publish OIDC
+  contents: read
+env:
+  MAJORVERSION: ''
+  MINORVERSION: ''
+  FULLVERSION: ''
+  PRERELEASE: ''
+jobs:
+  build_test_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v4
+      - name: 'Get Version'
+        id: get_version
+        uses: dhkatz/get-version-action@v3.0.0
+
+      - name: 'Create Component'
+        run: echo "COMPONENT_NAME=${COMPONENT_NAME}" >> $GITHUB_ENV
+        env:
+          COMPONENT_NAME: ${{inputs.COMPONENT_NAME}}
+      - name: 'Check for correct naming convention'
+        if: ${{ !steps.get_version.outputs.is-semver }}
+        run: exit 1
+      - name: 'Get major version from tag'
+        run: echo "MAJORVERSION=${GITHUB_BRANCH}" >> $GITHUB_ENV
+        env:
+          GITHUB_BRANCH: ${{ steps.get_version.outputs.major }}
+      - name: 'Get minor version from tag'
+        run: echo "MINORVERSION=${GITHUB_BRANCH}.${GITHUB_BRANCH_MINOR}" >> $GITHUB_ENV
+        env:
+          GITHUB_BRANCH: ${{ steps.get_version.outputs.major }}
+          GITHUB_BRANCH_MINOR: ${{ steps.get_version.outputs.minor }}
+      - name: Get patch (full) version from tag
+        run: echo "FULLVERSION=${GITHUB_BRANCH}" >> $GITHUB_ENV
+        env:
+          GITHUB_BRANCH: ${{ steps.get_version.outputs.version-without-v }}
+      - name: Get prelease version from tag
+        run: echo "PRERELEASE=${GITHUB_BRANCH}" >> $GITHUB_ENV
+        env:
+          GITHUB_BRANCH: ${{ steps.get_version.outputs.prerelease }}
+      - name: Display major version install
+        run: echo "Installing major version ${MAJORVERSION} for ${{inputs.COMPONENT_NAME}}"
+      - name: Display minor version install
+        run: echo "Installing minor version ${MINORVERSION} for ${{inputs.COMPONENT_NAME}}"
+      - name: Display patch (full) version install
+        run: echo "Installing patch (full) version ${FULLVERSION} for ${{inputs.COMPONENT_NAME}}"
+      - name: Production run
+        if: ${{ steps.get_version.outputs.prerelease == '' }}
+        run: echo "Running production deployment"
+      - name: Prerelease run
+        if: ${{ steps.get_version.outputs.prerelease != '' }}
+        run: echo "Running development deployment"
+
+      - run: npm install
+      - run: npm rebuild
+      - run: npm run-script build
+
+      # Run this to get the axe report
+      # This only uses Chrome, so it doesn't have to run the full Playwright install
+      - name: Run axe-core tests
+        run: npm run test:axe:github
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ vars.TOOLKIT_AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
+          aws-region: us-east-2
+
+      - name: Deploy toolbox to S3 bucket for major version
+        if: ${{ steps.get_version.outputs.prerelease == '' }}
+        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MAJORVERSION --delete --acl bucket-owner-full-control
+      - name: Invalidate Cloudfront cache for major version
+        if: ${{ steps.get_version.outputs.prerelease == '' }}
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MAJORVERSION*"
+      - name: Deploy toolbox to S3 bucket for minor version
+        if: ${{ steps.get_version.outputs.prerelease == '' }}
+        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$MINORVERSION --delete --acl bucket-owner-full-control
+      - name: Invalidate Cloudfront cache for minor version
+        if: ${{ steps.get_version.outputs.prerelease == '' }}
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$MINORVERSION*"
+      - name: Deploy toolbox to S3 bucket for patch (full) version
+        if: ${{ steps.get_version.outputs.prerelease == '' }}
+        run: aws s3 sync ./dist/cdn/ s3://cdn.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
+      - name: Invalidate Cloudfront cache for patch (full) version
+        if: ${{ steps.get_version.outputs.prerelease == '' }}
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+      - name: Deploy toolbox to S3 bucket for full version dev
+        if: ${{ steps.get_version.outputs.prerelease != '' }}
+        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
+      - name: Invalidate Cloudfront cache for full version dev
+        if: ${{ steps.get_version.outputs.prerelease != '' }}
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+      - name: Deploy toolbox to S3 bucket for latest dev
+        if: ${{ steps.get_version.outputs.prerelease != '' }}
+        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/latest --delete --acl bucket-owner-full-control
+      - name: Invalidate Cloudfront cache for latest dev
+        if: ${{ steps.get_version.outputs.prerelease != '' }}
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/latest*"
+
+  publish:
+    needs: build_test_deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm publish
