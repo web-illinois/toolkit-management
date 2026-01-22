@@ -1,6 +1,6 @@
 {
   "name": "@illinois-toolkit/toolkit-management",
-  "version": "3.7.5",
+  "version": "3.8.0-beta1",
   "description": "Global CSS and JS for toolkit",
   "main": "index.js",
   "scripts": {
@@ -42,11 +42,11 @@
     "@illinois-toolkit/ilw-card": "1.2.3",
     "@illinois-toolkit/ilw-carousel": "1.2.1",
     "@illinois-toolkit/ilw-columns": "1.3.3",
-    "@illinois-toolkit/ilw-content": "1.2.1",
-    "@illinois-toolkit/ilw-filter": "1.0.0",
+    "@illinois-toolkit/ilw-content": "1.2.2",
+    "@illinois-toolkit/ilw-filter": "1.1.1",
     "@illinois-toolkit/ilw-footer": "1.4.3",
     "@illinois-toolkit/ilw-grid": "1.2.1",
-    "@illinois-toolkit/ilw-header": "1.4.1",
+    "@illinois-toolkit/ilw-header": "1.4.3",
     "@illinois-toolkit/ilw-header-menu": "1.3.0",
     "@illinois-toolkit/ilw-hero": "1.1.1",
     "@illinois-toolkit/ilw-icon": "1.2.0",
