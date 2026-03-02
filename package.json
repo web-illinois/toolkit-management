@@ -63,7 +63,7 @@
     "@illinois-toolkit/ilw-spacer": "1.1.6",
     "@illinois-toolkit/ilw-statistic": "1.1.0",
     "@illinois-toolkit/ilw-tabs": "1.1.1",
-    "@illinois-toolkit/ilw-tooltip": "1.1.1",
+    "@illinois-toolkit/ilw-tooltip": "1.2.0",
     "@illinois-toolkit/ilw-video": "1.1.2",
     "@rollup/plugin-multi-entry": "^6.0.1",
     "postcss": "^8.4.41",
