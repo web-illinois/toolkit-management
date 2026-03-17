@@ -17,4 +17,4 @@ jobs:
     - uses: actions/add-to-project@main
       with:
         project-url: https://github.com/orgs/web-illinois/projects/7
-        github-token: ${{ secrets.TOOLKIT_PROJECT_PAT_CLASSIC }}
+        github-token: ${{ secrets.TOOLKIT_PROJECT_PAT_CLASSIC }}  # requires Classic PAT with admin:org and project (read:project)
