@@ -6,11 +6,11 @@
         --ilw-color--white--border-light: var(--il-storm-80);
         --ilw-color--white--link: var(--il-industrial);
         --ilw-color--white--link-hover: var(--il-altgeld);
-        --ilw-color--white--link-visited: #000000;
+        --ilw-color--white--link-visited: var(--il-industrial-darker-1);
         --ilw-color--white--heading: var(--il-blue);
         --ilw-color--white--heading-link: var(--il-blue);
         --ilw-color--white--heading-link-hover: var(--il-altgeld);
-        --ilw-color--white--heading-link-visited: #000000;
+        --ilw-color--white--heading-link-visited: var(--il-industrial-darker-1);
         --ilw-color--white--control: #ffffff;
         --ilw-color--white--control-text: var(--il-blue);
         --ilw-color--white--control-accent: var(--il-orange);
