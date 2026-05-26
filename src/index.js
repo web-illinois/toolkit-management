@@ -59,3 +59,4 @@ import '@illinois-toolkit/ilw-tabs';
 import '@illinois-toolkit/ilw-tabs/ilw-tabs.css';
 import '@illinois-toolkit/ilw-tooltip';
 import '@illinois-toolkit/ilw-video';
+import '@illinois-toolkit/ilw-video/ilw-video.css';
