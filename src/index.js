@@ -37,6 +37,8 @@ import '@illinois-toolkit/ilw-icon-panel';
 import '@illinois-toolkit/ilw-icon-panel/ilw-icon-panel.css';
 import '@illinois-toolkit/ilw-modal';
 import '@illinois-toolkit/ilw-modal/ilw-modal.css';
+import '@illinois-toolkit/ilw-org-chart';
+import '@illinois-toolkit/ilw-org-chart/ilw-org-chart.css';
 import '@illinois-toolkit/ilw-page';
 import '@illinois-toolkit/ilw-page/ilw-page.css';
 import '@illinois-toolkit/ilw-page-title';

@@ -52,6 +52,7 @@
     "@illinois-toolkit/ilw-icon": "1.2.0",
     "@illinois-toolkit/ilw-icon-panel": "1.0.1",
     "@illinois-toolkit/ilw-modal": "1.2.1",
+    "@illinois-toolkit/ilw-org-chart": "1.0.1",
     "@illinois-toolkit/ilw-page": "1.2.1",
     "@illinois-toolkit/ilw-page-title": "1.2.1",
     "@illinois-toolkit/ilw-pagination": "1.1.2",
