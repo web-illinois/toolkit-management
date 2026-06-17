@@ -12,7 +12,7 @@ This is a list of notes for developers working on a new component.
 5. Copy the sample HTML in your README.md *Code Examples* into your /samples directory.
 6. Copy the sample HTML and attribute / classes into the /builder json files.
 7. Build the component. Test it in your localhost. If you want, you can pull the toolkit builder code and [use that to test with other components](https://github.com/web-illinois/toolkit-builder-3?tab=readme-ov-file#running-the-builder-on-your-local-machine).
-8. Create unit tests. Most standard accessibility tests should be handled via the ilw-core. 
+8.  Create [unit tests](https://github.com/web-illinois/toolkit-management/blob/v3.7.1/documentation/UPGRADES.md#axe-core-tests). Most standard accessibility tests should be handled via the ilw-core. 
 9. Review the *package.json*, *README.md*, */samples* directory, and */builder* json files. Ensure that these match. 
 10. On your local machine, download the latest copy, confirm the package.json is pushing the 0.0.1 version, and run the commands `npm install`, `npm login`, and `npm publish --access public` to publish the package to https://www.npmjs.com/. *If you do not have access to NPM,* contact someone in the component team that has access. 
 11. Confirm that in https://www.npmjs.com/settings/illinois-toolkit/packages, the package has been generated. Update the package settings to include "web-illinois/..." as a Trusted Publisher. 
