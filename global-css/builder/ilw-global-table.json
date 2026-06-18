@@ -1,0 +1,12 @@
+{
+	"title": "Global Table Styles",
+    "tag": "ilw-global-table",
+    "github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "table",
+    "description": "The Global WIGG Stylesheet contains styles for tables.",
+    "purpose": "Use standard styling on a table.",
+    "toolkit-version": "3.0",
+    "production-version": "3.0",
+    "development-version": "latest"
+}
