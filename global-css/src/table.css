@@ -1,0 +1,118 @@
+table {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border: 1px solid var(--il-storm-60);
+  width: 100%;
+  overflow: auto;
+  background-color: var(--ilw-color--background);
+
+  @media (width <= 599px) {
+    border: none;
+  }
+
+  caption {
+    display: table-caption;
+    padding: 1rem 0 1rem;
+    font: 400 1.125rem/1.667rem var(--il-font-sans);
+  }
+}
+
+th {
+  box-sizing: border-box;
+  text-align: left;
+  font-weight: 700 !important;
+  font-size: 1.2rem;
+  border-top: 1px solid var(--il-storm-60);
+  border-bottom: 1px solid var(--il-storm-60);
+  border-left: none;
+  border-right: 1px solid var(--il-storm-60);
+  padding: .75rem 1rem;
+  vertical-align: middle;
+  word-break: normal;
+  overflow-wrap: normal;
+  font: 700 1.2rem/1.667rem var(--il-font-sans);
+  color: var(--ilw-color--text);
+}
+
+th:first-of-type {
+  border-left: 1px solid var(--il-storm-60);
+}
+
+th:last-of-type {
+  border-right: 1px solid var(--il-storm-60);
+}
+
+thead th {
+  background-color: var(--il-blue);
+  color: white;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+tbody th {
+  background: var(--il-blue);
+  color: white;
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+
+td {
+  box-sizing: border-box;
+  text-align: left;
+  vertical-align: top;
+  padding: .75rem 1rem;
+  border-top: 1px solid var(--il-storm-60);
+  border-bottom: 1px solid var(--il-storm-60);
+  border-left: none;
+  border-right: 1px solid var(--il-storm-60);
+  word-break: normal;
+  overflow-wrap: normal;
+  font: 400 1.125rem/1.667rem var(--il-font-sans);
+  color: var(--ilw-color--text);
+}
+
+td:first-of-type {
+  border-left: 1px solid var(--il-storm-60);
+}
+
+td:last-of-type {
+  border-right: 1px solid var(--il-storm-60);
+}
+
+.table-stripe {
+  tr:nth-child(even) {
+    background-color: var(--il-storm-95);
+  }
+}
+
+.table-responsive {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smoother scroll on iOS */
+}
+
+.table-responsive table {
+  width: 100%;
+
+  @media (width <= 599px) {
+    width: auto;
+  }
+}
+
+@media (width <= 599px) {
+  .table-responsive thead th {
+    white-space: nowrap;
+  }
+}
+
+table.table-responsive {
+  max-width: 100%;
+}
+
+table.table-responsive {
+  @media (width <= 599px) {
+    width: auto;
+    display: block;
+  }
+}
