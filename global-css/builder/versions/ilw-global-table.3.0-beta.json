@@ -43,16 +43,8 @@
                 "",
                 "ilw-theme-table-gray",
                 "ilw-theme-table-blue",
+                "ilw-theme-table-blue-light",
                 "ilw-theme-table-orange"
-            ]
-        },
-        {
-            "name": "white-background",
-            "description": "White background for blue theme tables",
-            "depreciated": false,
-            "values": [
-                "",
-                "table-white"
             ]
         }
     ],
