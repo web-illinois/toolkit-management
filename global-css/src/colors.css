@@ -292,8 +292,8 @@
     --ilw-color--table-head-color: var(--ilw-color--orangegrad--table-head-color);
 }
 
-table.ilw-theme-table-blue.white {
-  --ilw-color--table-background: white;
-  --ilw-color--text: var(--il-storm-10);
-  --ilw-color--table-row-stripe: white;
+table.ilw-theme-table-blue-light {
+  --ilw-color--table-border: var(--ilw-color--blue--table-border);
+  --ilw-color--table-head-background: var(--ilw-color--blue--table-head-background);
+  --ilw-color--table-head-color: var(--ilw-color--blue--table-head-color);
 }
