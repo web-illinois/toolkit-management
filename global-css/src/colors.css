@@ -15,6 +15,11 @@
         --ilw-color--white--control-text: var(--il-blue);
         --ilw-color--white--control-accent: var(--il-orange);
         --ilw-color--white--control-accent-text: #ffffff;
+        --ilw-color--white--table-border: var(--il-storm-60);
+        --ilw-color--white--table-background: #ffffff;
+        --ilw-color--white--table-row-stripe: var(--il-storm-95);
+        --ilw-color--white--table-head-background: var(--il-blue);
+        --ilw-color--white--table-head-color: white;
 
         --ilw-color--background: var(--ilw-color--white--background);
         --ilw-color--text: var(--ilw-color--white--text);
@@ -31,6 +36,11 @@
         --ilw-color--control-text: var(--ilw-color--white--control-text);
         --ilw-color--control-accent: var(--ilw-color--white--control-accent);
         --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
+        --ilw-color--table-border: var(--ilw-color--white--table-border);
+        --ilw-color--table-background: var(--ilw-color--white--table-background);
+        --ilw-color--table-row-stripe: var(--ilw-color--white--table-row-stripe);
+        --ilw-color--table-head-background: var(--ilw-color--white--table-head-background);
+        --ilw-color--table-head-color: var(--ilw-color--white--table-head-color);
 
         --ilw-color--blue--background: var(--il-blue);
         --ilw-color--blue--text: #ffffff;
@@ -47,6 +57,11 @@
         --ilw-color--blue--control-text: #ffffff;
         --ilw-color--blue--control-accent: var(--il-orange);
         --ilw-color--blue--control-accent-text: #ffffff;
+        --ilw-color--blue--table-border: var(--il-blue-70);
+        --ilw-color--blue--table-background: var(--il-blue);
+        --ilw-color--blue--table-row-stripe: var(--il-blue-30);
+        --ilw-color--blue--table-head-background: var(--il-industrial);
+        --ilw-color--blue--table-head-color: white;
 
         --ilw-color--orange--background: var(--il-orange);
         --ilw-color--orange--text: var(--il-blue);
@@ -63,6 +78,11 @@
         --ilw-color--orange--control-text: #ffffff;
         --ilw-color--orange--control-accent: var(--il-blue);
         --ilw-color--orange--control-accent-text: #ffffff;
+        --ilw-color--orange--table-border: var(--il-storm-60);
+        --ilw-color--orange--table-background: #ffffff;
+        --ilw-color--orange--table-row-stripe: var(--il-storm-95);
+        --ilw-color--orange--table-head-background: var(--il-orange-40);
+        --ilw-color--orange--table-head-color: white;
 
         --ilw-color--focus--background: var(--il-arches-90);
         --ilw-color--focus--text: var(--il-blue);
@@ -83,6 +103,11 @@
         --ilw-color--gray--control-text: var(--il-blue);
         --ilw-color--gray--control-accent: var(--il-orange);
         --ilw-color--gray--control-accent-text: #ffffff;
+        --ilw-color--gray--table-border: var(--il-storm-60);
+        --ilw-color--gray--table-background: var(--il-storm-95);
+        --ilw-color--gray--table-row-stripe: var(--il-storm-80);
+        --ilw-color--gray--table-head-background: var(--il-blue);
+        --ilw-color--gray--table-head-color: white;
 
         --ilw-color--bluegrad--background: linear-gradient(135deg, #1D58A7 0%, #13294B 100%);
         --ilw-color--bluegrad--text: #ffffff;
@@ -99,6 +124,11 @@
         --ilw-color--bluegrad--control-text: #ffffff;
         --ilw-color--bluegrad--control-accent: var(--il-orange);
         --ilw-color--bluegrad--control-accent-text: #ffffff;
+        --ilw-color--bluegrad--table-border: var(--il-blue-70);
+        --ilw-color--bluegrad--table-background: var(--il-blue);
+        --ilw-color--bluegrad--table-row-stripe: var(--il-blue-30);
+        --ilw-color--bluegrad--table-head-background: var(--il-industrial);
+        --ilw-color--bluegrad--table-head-color: white;
 
         --ilw-color--orangegrad--background: linear-gradient(135deg, #FCB316 0%, #FD890E 18.89%, #FF5F05 80.81%);
         --ilw-color--orangegrad--text: var(--il-blue);
@@ -115,7 +145,11 @@
         --ilw-color--orangegrad--control-text: #ffffff;
         --ilw-color--orangegrad--control-accent: var(--il-blue);
         --ilw-color--orangegrad--control-accent-text: #ffffff;
-
+        --ilw-color--orangegrad--table-border: var(--il-storm-60);
+        --ilw-color--orangegrad--table-background: #ffffff;
+        --ilw-color--orangegrad--table-row-stripe: var(--il-storm-95);
+        --ilw-color--orangegrad--table-head-background: var(--il-orange-40);
+        --ilw-color--orangegrad--table-head-color: white;
     }
 }
 [theme="white"], .ilw-theme-blue, .ilw-theme-blue-outline {
@@ -134,6 +168,11 @@
     --ilw-color--control-text: var(--ilw-color--white--control-text);
     --ilw-color--control-accent: var(--ilw-color--white--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text);
+    --ilw-color--table-border: var(--ilw-color--white--table-border);
+    --ilw-color--table-background: var(--ilw-color--white--table-background);
+    --ilw-color--table-row-stripe: var(--ilw-color--white--table-row-stripe);
+    --ilw-color--table-head-background: var(--ilw-color--white--table-head-background);
+    --ilw-color--table-head-color: var(--ilw-color--white--table-head-color);
 }
 [theme="blue"], .ilw-theme-blue-1, .ilw-theme-blue-2, .ilw-theme-blue-solid, .ilw-theme-blue-inverse, .ilw-theme-table-blue {
     --ilw-color--background: var(--ilw-color--blue--background);
@@ -151,6 +190,11 @@
     --ilw-color--control-text: var(--ilw-color--blue--control-text);
     --ilw-color--control-accent: var(--ilw-color--blue--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--blue--control-accent-text);
+    --ilw-color--table-border: var(--ilw-color--blue--table-border);
+    --ilw-color--table-background: var(--ilw-color--blue--table-background);
+    --ilw-color--table-row-stripe: var(--ilw-color--blue--table-row-stripe);
+    --ilw-color--table-head-background: var(--ilw-color--blue--table-head-background);
+    --ilw-color--table-head-color: var(--ilw-color--blue--table-head-color);
 }
 
 [theme="gray"], .ilw-theme-table-gray {
@@ -169,6 +213,11 @@
     --ilw-color--control-text: var(--ilw-color--gray--control-text);
     --ilw-color--control-accent: var(--ilw-color--gray--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--gray--control-accent-text);
+    --ilw-color--table-border: var(--ilw-color--gray--table-border);
+    --ilw-color--table-background: var(--ilw-color--gray--table-background);
+    --ilw-color--table-row-stripe: var(--ilw-color--gray--table-row-stripe);
+    --ilw-color--table-head-background: var(--ilw-color--gray--table-head-background);
+    --ilw-color--table-head-color: var(--ilw-color--gray--table-head-color);
 }
 [theme="blue-gradient"] {
     --ilw-color--background: var(--ilw-color--bluegrad--background);
@@ -186,8 +235,13 @@
     --ilw-color--control-text: var(--ilw-color--bluegrad--control-text);
     --ilw-color--control-accent: var(--ilw-color--bluegrad--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--bluegrad--control-accent-text);
+    --ilw-color--table-border: var(--ilw-color--bluegrad--table-border);
+    --ilw-color--table-background: var(--ilw-color--bluegrad--table-background);
+    --ilw-color--table-row-stripe: var(--ilw-color--bluegrad--table-row-stripe);
+    --ilw-color--table-head-background: var(--ilw-color--bluegrad--table-head-background);
+    --ilw-color--table-head-color: var(--ilw-color--bluegrad--table-head-color);
 }
-[theme="orange"], .ilw-theme-orange-1, .ilw-theme-orange-2, .ilw-theme-orange-solid, .ilw-theme-orange-inverse {
+[theme="orange"], .ilw-theme-orange-1, .ilw-theme-orange-2, .ilw-theme-orange-solid, .ilw-theme-orange-inverse, .ilw-theme-table-orange {
     --ilw-color--background: var(--ilw-color--orange--background);
     --ilw-color--text: var(--ilw-color--orange--text);
     --ilw-color--border: var(--ilw-color--orange--border);
@@ -203,6 +257,11 @@
     --ilw-color--control-text: var(--ilw-color--orange--control-text);
     --ilw-color--control-accent: var(--ilw-color--orange--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--orange--control-accent-text);
+    --ilw-color--table-border: var(--ilw-color--orange--table-border);
+    --ilw-color--table-background: var(--ilw-color--orange--table-background);
+    --ilw-color--table-row-stripe: var(--ilw-color--orange--table-row-stripe);
+    --ilw-color--table-head-background: var(--ilw-color--orange--table-head-background);
+    --ilw-color--table-head-color: var(--ilw-color--orange--table-head-color);
 }
 
 .ilw-theme-orange, .ilw-theme-orange-outline {
@@ -226,4 +285,15 @@
     --ilw-color--control-text: var(--ilw-color--orangegrad--control-text);
     --ilw-color--control-accent: var(--ilw-color--orangegrad--control-accent);
     --ilw-color--control-accent-text: var(--ilw-color--orangegrad--control-accent-text);
+    --ilw-color--table-border: var(--ilw-color--orangegrad--table-border);
+    --ilw-color--table-background: var(--ilw-color--orangegrad--table-background);
+    --ilw-color--table-row-stripe: var(--ilw-color--orangegrad--table-row-stripe);
+    --ilw-color--table-head-background: var(--ilw-color--orangegrad--table-head-background);
+    --ilw-color--table-head-color: var(--ilw-color--orangegrad--table-head-color);
+}
+
+table.ilw-theme-table-blue.white {
+  --ilw-color--table-background: white;
+  --ilw-color--text: var(--il-storm-10);
+  --ilw-color--table-row-stripe: white;
 }
