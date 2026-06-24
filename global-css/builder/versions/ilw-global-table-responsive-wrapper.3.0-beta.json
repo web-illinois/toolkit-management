@@ -1,0 +1,29 @@
+{
+    "title": "Global Table Styles (responsive wrapper)",
+    "tag": "ilw-global-table-responsive-wrapper",
+    "github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains styles for tables. This is a wrapper for tables to make them responsive",
+    "builder-version": "latest",
+    "version": "3.0-beta",
+    "date": "06/24/2026",
+    "css": "",
+    "js": "",
+    "production": false,
+    "notes": "",
+    "parent-style": "",
+    "samples": [
+        {
+            "name": "responsive-scroll",
+            "description": "Horizontal scroll on smaller screens",
+            "text": "<div class=\"ilw-table-responsive\">\n        <table>\n        <thead>\n        <tr>\n            <th>\n                ID Number\n            </th>\n            <th>\n                Name\n            </th>\n            <th>\n                Department\n            </th>\n            <th>\n                Status\n            </th>\n            <th>\n                Score\n            </th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr>\n            <td>\n                001\n            </td>\n            <td>\n                Avery Chen\n            </td>\n            <td>\n                Marketing\n            </td>\n            <td>\n                Active\n            </td>\n            <td>\n                87\n            </td>\n        </tr>\n        <tr>\n            <td>\n                002\n            </td>\n            <td>\n                Jordan Patel\n            </td>\n            <td>\n                Engineering\n            </td>\n            <td>\n                Inactive\n            </td>\n            <td>\n                92\n            </td>\n        </tr>\n        <tr>\n            <td>\n                003\n            </td>\n            <td>\n                Riley Garcia\n            </td>\n            <td>\n                Design\n            </td>\n            <td>\n                Active\n            </td>\n            <td>\n                76\n            </td>\n        </tr>\n        <tr>\n            <td>\n                004\n            </td>\n            <td>\n                Taylor Nguyen\n            </td>\n            <td>\n                Finance\n            </td>\n            <td>\n                Pending\n            </td>\n            <td>\n                81\n            </td>\n        </tr>\n        <tr>\n            <td>\n                005\n            </td>\n            <td>\n                Morgan Smith\n            </td>\n            <td>\n                HR\n            </td>\n            <td>\n                Active\n            </td>\n            <td>\n                89\n            </td>\n        </tr>\n        <tr>\n            <td>\n                006\n            </td>\n            <td>\n                Casey Johnson\n            </td>\n            <td>\n                Support\n            </td>\n            <td>\n                Inactive\n            </td>\n            <td>\n                73\n            </td>\n        </tr>\n        </tbody>\n    </table>\n    </div>"
+        }
+    ],
+    "attributes-fixed": [],
+    "attributes-text": [],
+    "attributes": [],
+    "classes-fixed": [],
+    "classes": [],
+    "css-variables": []
+}
