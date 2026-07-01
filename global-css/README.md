@@ -8,4 +8,5 @@ This contains:
 * buttons: A helper class to handle a button, button link, group of buttons, and group of button links. Individual buttons are `a` or `button` and marked with `ilw-button`. Groups are to be in an `ul` list and marked with `ilw-buttons` (centered) or `ilw-buttons-left` (flush left). 
 * image-cover: A helper class to create an area that contains an image that covers the entire area. The container around the `img` should use the `ilw-image-cover` class if you want the focus of the image in the center. You can also use `ilw-image-cover-top`, `ilw-image-cover-bottom`, `ilw-image-cover-left`, or `ilw-image-cover-right` to change the focus of the image to top, bottom, left, or right.
 * screen-reader: A helper class to handle text that should be invisible to a sighted user but still be read by a screen reader. This can be any item and has the class `ilw-sr-only`. Note that header information should never be put in this class. 
-* new window icon: A helper class to handle the "new window" icon for any components that want to implement this. 
+* new window icon: A helper class to handle the "new window" icon for any components that want to implement this.
+* tables: Styles for tables, and helper classes to add striping and a responsive wrapper.

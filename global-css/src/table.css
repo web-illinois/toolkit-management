@@ -89,20 +89,20 @@ td:last-of-type {
   border-right: 1px solid var(--ilw-color--table-border);
 }
 
-.table-stripe {
+.ilw-table-stripe {
   tr:nth-child(even) {
     background: var(--ilw-color--table-row-stripe);
   }
 }
 
-.table-responsive {
+.ilw-table-responsive {
   max-width: 100%;
   min-width: 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* smoother scroll on iOS */
 }
 
-.table-responsive table {
+.ilw-table-responsive table {
   width: 100%;
 
   @media (width <= 599px) {
@@ -111,7 +111,7 @@ td:last-of-type {
 }
 
 @media (width <= 599px) {
-  .table-responsive thead th {
+  .ilw-table-responsive thead th {
     white-space: nowrap;
   }
 }

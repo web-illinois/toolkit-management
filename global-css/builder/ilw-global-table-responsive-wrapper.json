@@ -1,0 +1,12 @@
+{
+	"title": "Global Table Styles (responsive wrapper)",
+    "tag": "ilw-global-table-responsive-wrapper",
+    "github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains styles for tables. This is a wrapper for tables to make them responsive.",
+    "purpose": "Make a table scroll horizontally on mobile.",
+    "toolkit-version": "3.0",
+    "production-version": "3.0",
+    "development-version": "latest"
+}
