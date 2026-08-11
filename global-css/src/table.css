@@ -5,7 +5,7 @@
   --ilw-color--table-head-color: white;
 }
 
-table {
+ilw-page.ilw-format main table, ilw-content table {
   box-sizing: border-box;
   border-collapse: collapse;
   border: 1px solid var(--ilw-color--table-border);
@@ -25,11 +25,11 @@ table {
   }
 }
 
-tr {
+ilw-page.ilw-format main table tr, ilw-content table tr {
   background: var(--ilw-color--table-background);
 }
 
-th {
+ilw-page.ilw-format main table th, ilw-content table th {
   box-sizing: border-box;
   text-align: left;
   font-weight: 700 !important;
@@ -46,29 +46,29 @@ th {
   color: var(--ilw-color--text);
 }
 
-th:first-of-type {
+ilw-page.ilw-format main table th:first-of-type, ilw-content table th:first-of-type {
   border-left: 1px solid var(--ilw-color--table-border);
 }
 
-th:last-of-type {
+ilw-page.ilw-format main table th:last-of-type, ilw-content table th:last-of-type {
   border-right: 1px solid var(--ilw-color--table-border);
 }
 
-thead th {
+ilw-page.ilw-format main table thead th, ilw-content table thead th {
   background: var(--ilw-color--table-head-background);
   color: white;
   word-break: normal;
   overflow-wrap: normal;
 }
 
-tbody th {
+ilw-page.ilw-format main table tbody th, ilw-content table tbody th {
   background: var(--ilw-color--table-head-background);
   color: white;
   font-weight: 700 !important;
   white-space: nowrap;
 }
 
-td {
+ilw-page.ilw-format main table td, ilw-content table td {
   box-sizing: border-box;
   text-align: left;
   vertical-align: top;
@@ -83,11 +83,11 @@ td {
   color: var(--ilw-color--text);
 }
 
-td:first-of-type {
+ilw-page.ilw-format main table td:first-of-type, ilw-content table td:first-of-type {
   border-left: 1px solid var(--ilw-color--table-border);
 }
 
-td:last-of-type {
+ilw-page.ilw-format main table td:last-of-type, ilw-content table td:last-of-type {
   border-right: 1px solid var(--ilw-color--table-border);
 }
 
