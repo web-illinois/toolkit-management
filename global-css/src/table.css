@@ -19,7 +19,9 @@ table {
   caption {
     display: table-caption;
     padding: 1rem 0 1rem;
-    font: 400 1.125rem/1.667rem var(--il-font-sans);
+    font: 700 1.25rem/1.8rem var(--il-font-sans);
+    color: var(--ilw-color--text);
+    background: var(--ilw-color--table-background);
   }
 }
 
