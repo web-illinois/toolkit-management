@@ -6,7 +6,7 @@
     "element-name": "table",
     "description": "The Global WIGG Stylesheet contains styles for tables.",
     "builder-version": "latest",
-    "version": "3.0",
+    "version": "3.0-beta",
     "date": "06/18/2026",
     "css": "",
     "js": "",
