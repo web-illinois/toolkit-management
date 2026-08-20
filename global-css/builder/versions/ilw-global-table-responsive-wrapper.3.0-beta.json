@@ -6,7 +6,7 @@
     "element-name": "div",
     "description": "The Global WIGG Stylesheet contains styles for tables. This is a wrapper for tables to make them responsive",
     "builder-version": "latest",
-    "version": "3.0-beta",
+    "version": "3.0",
     "date": "06/24/2026",
     "css": "",
     "js": "",
