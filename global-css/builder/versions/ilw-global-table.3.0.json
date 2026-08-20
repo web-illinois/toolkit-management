@@ -1,0 +1,52 @@
+{
+    "title": "Global Table Styles",
+    "tag": "ilw-global-table",
+    "github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "table",
+    "description": "The Global WIGG Stylesheet contains styles for tables.",
+    "builder-version": "3.0",
+    "version": "3.0",
+    "date": "06/18/2026",
+    "css": "",
+    "js": "",
+    "production": false,
+    "notes": "",
+    "parent-style": "",
+    "samples": [
+        {
+            "name": "default",
+            "description": "Default Table",
+            "text": "<ilw-content><table>\n        <caption>Table Caption</caption>\n        <thead>\n        <tr>\n            <th>\n                ID Number\n            </th>\n            <th>\n                Name\n            </th>\n            <th>\n                Department\n            </th>\n            <th>\n                Status\n            </th>\n            <th>\n                Score\n            </th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr>\n            <td>\n                001\n            </td>\n            <td>\n                Avery Chen\n            </td>\n            <td>\n                Marketing\n            </td>\n            <td>\n                Active\n            </td>\n            <td>\n                87\n            </td>\n        </tr>\n        <tr>\n            <td>\n                002\n            </td>\n            <td>\n                Jordan Patel\n            </td>\n            <td>\n                Engineering\n            </td>\n            <td>\n                Inactive\n            </td>\n            <td>\n                92\n            </td>\n        </tr>\n        <tr>\n            <td>\n                003\n            </td>\n            <td>\n                Riley Garcia\n            </td>\n            <td>\n                Design\n            </td>\n            <td>\n                Active\n            </td>\n            <td>\n                76\n            </td>\n        </tr>\n        <tr>\n            <td>\n                004\n            </td>\n            <td>\n                Taylor Nguyen\n            </td>\n            <td>\n                Finance\n            </td>\n            <td>\n                Pending\n            </td>\n            <td>\n                81\n            </td>\n        </tr>\n        <tr>\n            <td>\n                005\n            </td>\n            <td>\n                Morgan Smith\n            </td>\n            <td>\n                HR\n            </td>\n            <td>\n                Active\n            </td>\n            <td>\n                89\n            </td>\n        </tr>\n        <tr>\n            <td>\n                006\n            </td>\n            <td>\n                Casey Johnson\n            </td>\n            <td>\n                Support\n            </td>\n            <td>\n                Inactive\n            </td>\n            <td>\n                73\n            </td>\n        </tr>\n        </tbody>\n    </table></ilw-content>"
+        }
+    ],
+    "attributes-fixed": [],
+    "attributes-text": [],
+    "attributes": [],
+    "classes-fixed": [],
+    "classes": [
+        {
+            "name": "theme",
+            "description": "Color theme used",
+            "depreciated": false,
+            "values": [
+                "",
+                "ilw-theme-table-gray",
+                "ilw-theme-table-blue",
+                "ilw-theme-table-orange",
+                "ilw-theme-table-blue-light",
+                "ilw-theme-table-orange-white-background"
+            ]
+        },
+        {
+            "name": "striped",
+            "description": "Table with striped rows",
+            "depreciated": false,
+            "values": [
+                "",
+                "ilw-table-stripe"
+            ]
+        }
+    ],
+    "css-variables": []
+}
