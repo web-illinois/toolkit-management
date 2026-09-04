@@ -18,7 +18,7 @@ These are automatically added to the project.
 * **No Status**: These are added using dependabot and have lower priority. 
 
 ## Working On
-During the WIGG Web Components meeting, we will assign work and send items to these categories. 
+During the WIGG Web Components meeting, we will assign work and send items to these categories. We will try to group issues that focus on a single component together and assign them to a developer. 
 
 ### Who does this and when?
 The person who intends to work on this will move the issue to these categories.
@@ -29,7 +29,7 @@ The person who intends to work on this will move the issue to these categories.
 * **In Progress**: The person is working on the ticket. 
 
 ## Release
-This signifies that the issue has been fixed and it is ready to be integrated into the toolkit. Before you get to this stage, perform the following steps:
+This signifies that the issue has been fixed and the component is ready to be integrated into the toolkit. If you have multiple issues with the same component, wait until all issues you plan on fixing are fixed before getting to this stage. Before you get to this stage, perform the following steps:
 1. Create a new production version of the component using the "releases" area in GitHub. This will deploy to the /latest build. 
 2. In the issue, create a comment with a testing link for the testers. This will most likely be the Toolkit Builder application. 
 
