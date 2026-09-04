@@ -34,14 +34,14 @@ This signifies that the issue has been fixed and the component is ready to be in
 2. In the issue, create a comment with a testing link for the testers. This will most likely be the Toolkit Builder application. 
 
 ### Who does this and when?
-The person who completes the work on this will move the issue to this category when they create a new production version. 
+The person who completes the work on this will move the issue to this category when they create a new production version of the component. 
 
 ### Categories
 * **Slotted for Next Release**
 
 ## Needs Review
-These two categories are for items that are "closed" as far as the Web Components teams is concerned. All issues in these two categories should be closed, and any tickets closed will be automatically added to the For *Product Review* category. Before you get to this stage, perform the following steps:
-1. Copy the ticket details and link to the release notes. 
+These two categories are for items that are "closed" as far as the Web Components teams is concerned. All issues in these two categories should be closed, and any tickets closed will be automatically added to the *For Product Review* category. Before you get to this stage, perform the following steps:
+1. Copy the ticket title and link to the release notes. 
 2. Close the ticket.
 
 ### Who does this and when?
