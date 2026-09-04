@@ -97,18 +97,16 @@ jobs:
       - name: Invalidate Cloudfront cache for patch (full) version
         if: ${{ steps.get_version.outputs.prerelease == '' }}
         run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
+      - name: Deploy toolbox to S3 bucket for latest dev
+        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/latest --delete --acl bucket-owner-full-control
+      - name: Invalidate Cloudfront cache for latest dev
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/latest*"
       - name: Deploy toolbox to S3 bucket for full version dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
         run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/$FULLVERSION --delete --acl bucket-owner-full-control
       - name: Invalidate Cloudfront cache for full version dev
         if: ${{ steps.get_version.outputs.prerelease != '' }}
         run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/$FULLVERSION*"
-      - name: Deploy toolbox to S3 bucket for latest dev
-        if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/latest --delete --acl bucket-owner-full-control
-      - name: Invalidate Cloudfront cache for latest dev
-        if: ${{ steps.get_version.outputs.prerelease != '' }}
-        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/latest*"
 
   publish:
     needs: build_test_deploy
