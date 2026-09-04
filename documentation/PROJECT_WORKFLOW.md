@@ -56,4 +56,6 @@ Product Review is going to review items in the *For Product Review* category. If
 
 If the component has problems, they will document the problem in the issue, re-open the issue, and move it to one of two categories:
 * If this is an urgent issue, it will go into the *Emergency Fix* category.
-* If this is a non-urgent issue, it will go into the *QC Bugs* category. 
+* If this is a non-urgent issue, it will go into the *QC Bugs* category.
+
+[Back to the README.md document](README.md)
