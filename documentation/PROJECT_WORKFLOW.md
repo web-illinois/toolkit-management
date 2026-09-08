@@ -17,7 +17,7 @@ These are automatically added to the project.
 * **QC Bugs**: Quality Control is instructed to use this category when creating bugs. These should be given higher priority because they may be causing accessibility issues. 
 * **No Status**: These are added using dependabot and have lower priority. 
 
-## Working On
+## In Process
 During the WIGG Web Components meeting, we will assign work and send items to these categories. We will try to group issues that focus on a single component together and assign them to a developer. 
 
 ### Before you get to this stage:
