@@ -63,7 +63,7 @@ The person responsible for building the Toolkit when the toolkit is built.
 This contains breaking issues or issues with a high accessibility violation that needs to bypass the regular process. These usually cause the toolkit to increment by a minor version.
 
 ### Who does this and when?
-Product Review puts new items here; the person responsible for building the toolkit resolves and moves these back to review for the next iteration. 
+The Product Review or toolkit developers can move items here. See [Reporting a Production Issue](https://github.com/web-illinois/toolkit-management/blob/main/documentation/PRODUCTION_ISSUE.md). The person responsible for building the toolkit resolves and moves these back to review for the next iteration. 
 
 ### Categories
 * **Emergency Fixes**
