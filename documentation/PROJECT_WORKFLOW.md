@@ -18,7 +18,7 @@ These are automatically added to the project.
 * **No Status**: These are added using dependabot and have lower priority. 
 
 ## In Process
-During the WIGG Web Components meeting, we will assign work and send items to these categories. We will try to group issues that focus on a single component together and assign them to a developer. 
+During the WIGG Web Components meeting, we will assign work and send items to these categories. We will try to group issues that focus on a single component together and assign them to a developer. Priority is given to tasks identified as emergency fixes. 
 
 ### Before you get to this stage:
 1. Assign ths issue to a developer
@@ -29,7 +29,8 @@ The person who intends to work on this will move the issue to these categories.
 ### Categories
 * **Starting Work**: The person is intending to work on this, but hasn't started the work. 
 * **Documenting**: The person is working on documentation. This is mainly for new components and major enhancements. 
-* **In Progress**: The person is working on the ticket. 
+* **In Progress**: The person is working on the ticket.
+
 
 ## Release
 This signifies that the issue has been fixed and the component is ready to be integrated into the toolkit. If you have multiple issues with the same component, wait until all issues you plan on fixing are fixed before getting to this stage. 
@@ -42,10 +43,10 @@ This signifies that the issue has been fixed and the component is ready to be in
 The person who completes the work on this will move the issue to this category when they create a new production version of the component. 
 
 ### Categories
-* **Slotted for Next Release**
+* **Slotted for Next Release**  
 
 ## Needs Review
-These two categories are for items that are "closed" as far as the Web Components teams is concerned. All issues in these two categories should be closed, and any tickets closed will be automatically added to the *For Product Review* category. 
+These two categories are for items that are "closed" as far as the Web Components teams is concerned. All issues in these two categories should be closed, and any tickets closed will be automatically added to the *For Product Review* category. See [Product Review Workflow](https://github.com/web-illinois/toolkit-management/blob/main/documentation/PRODUCT_REVIEW_WORKFLOW.md).
 
 ### Before you get to this stage:
 1. Copy the ticket title and link to the release notes. 
@@ -57,5 +58,14 @@ The person responsible for building the Toolkit when the toolkit is built.
 ### Categories
 * **For Product Review**: needs to be validated by the WIGG Product Review team
 * **Done**: does not need to be validated by the WIGG Product Review team -- used for internal items
+
+## Emergency Fixes
+This contains breaking issues or issues with a high accessibility violation that needs to bypass the regular process. These usually cause the toolkit to increment by a minor version.
+
+### Who does this and when?
+Product Review puts new items here; the person responsible for building the toolkit resolves and moves these back to review for the next iteration. 
+
+### Categories
+* **Emergency Fixes**
 
 [Back to the README.md document](README.md)
