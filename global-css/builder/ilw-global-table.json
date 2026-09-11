@@ -1,12 +1,16 @@
 {
-	"title": "Global Table Styles",
-    "tag": "ilw-global-table",
-    "github": "https://github.com/web-illinois/toolkit-management/",
-    "type": "stylesheet",
-    "element-name": "table",
-    "description": "The Global WIGG Stylesheet contains styles for tables.",
-    "purpose": "Use standard styling on a table.",
-    "toolkit-version": "3.0",
-    "production-version": "3.0",
-    "development-version": "latest"
+  "title": "Global Table Styles",
+  "id": "ilw-global-table",
+  "type": "Stylesheet",
+  "repository-name": "toolkit-management",
+  "description": "Apply consistent Illinois styling to tables for clearer headings, rows, and data.",
+  "purpose": "Use standard styling on a table.",
+  "customtemplates": [],
+  "versions": [
+    {
+      "name": "3.0",
+      "notes": "",
+      "template": "3.0"
+    }
+  ]
 }
