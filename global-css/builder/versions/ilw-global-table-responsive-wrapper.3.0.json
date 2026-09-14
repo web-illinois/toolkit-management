@@ -5,7 +5,7 @@
   "usejs": false,
   "usecss": false,
   "builder-information": {
-    "element-name": "div",
+    "element-name": "table",
     "addon-html": "",
     "parent-wrapper": "ilw-content",
     "parent-class": "ilw-table-responsive",
