@@ -15,10 +15,11 @@ This is a list of notes for developers working on a new component.
 8.  Create [unit tests](https://github.com/web-illinois/toolkit-management/blob/v3.7.1/documentation/UPGRADES.md#axe-core-tests). Most standard accessibility tests should be handled via the ilw-core. 
 9. Review the *package.json*, *README.md*, */samples* directory, and */builder* json files. Ensure that these match. 
 10. On your local machine, download the latest copy, confirm the package.json is pushing the 0.0.1 version, and run the commands `npm install`, `npm login`, and `npm publish --access public` to publish the package to https://www.npmjs.com/. *If you do not have access to NPM,* contact someone in the component team that has access. 
-11. Confirm that in https://www.npmjs.com/settings/illinois-toolkit/packages, the package has been generated. Update the package settings to include "web-illinois/..." as a Trusted Publisher. 
-12. In Github, create a release with the tag `v1.0.0-alpha` (or some other tag that signifies an alpha release). This will publish your code to the development server and create an NPM package. 
-13. Either ask for the component to be added to the toolkit builder, or [add the component to the builder yourself](https://github.com/web-illinois/toolkit-builder-3?tab=readme-ov-file#adding-to-this-project). 
-14. *Post this information* into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), move the project to *For Review*.
+11. Confirm that in https://www.npmjs.com/settings/illinois-toolkit/packages, the package has been generated.
+12. Add security settings to allow GitHub Actions to publish to NPM. See [instructions on how to add security settings to the NPM package](https://github.com/web-illinois/toolkit-management/blob/main/documentation/INTEGRATION.md#security-updates). 
+13. In Github, create a release with the tag `v1.0.0-alpha` (or some other tag that signifies an alpha release). This will publish your code to the development server and create an NPM package. 
+14. Either ask for the component to be added to the toolkit builder, or [add the component to the builder yourself](https://github.com/web-illinois/toolkit-builder-3?tab=readme-ov-file#adding-to-this-project). 
+15. *Post this information* into the [Toolkit Developer Team Channel](https://go.illinois.edu/toolkit-developers) for comments. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), move the project to *For Review*.
 
 ## Creating a new repository
 [Create a new repository from the toolkit template.](https://github.com/web-illinois/template-ilw-typescript) This template will generate the Github Actions, recommended toolset, automated accessibility testing, and sample pages to start testing your component. 
