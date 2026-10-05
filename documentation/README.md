@@ -9,4 +9,4 @@ This is a guideline for developers to work with the Illinois Toolkit.
 5. [Best Practices and Naming Conventions](BEST_PRACTICES.md)
 6. [NPM and Toolkit Integration](INTEGRATION.md)
 7. [Toolkit Upgrades (9/15/2025)](UPGRADES.md)
-8. [Product Review Notes (9/4/2026)](PRODUCT_REVIEW_NOTES.md)
+8. [Product Review Workflow (9/4/2026)](PRODUCT_REVIEW_WORKFLOW.md)

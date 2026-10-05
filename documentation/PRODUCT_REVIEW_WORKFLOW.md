@@ -1,4 +1,4 @@
-# Product Review Notes
+# Product Review Workflow
 
 Product Review is going to review issues in the *For Product Review* category. To assist with this, all issues in this category will have a comment that gives them a testing platform.
 

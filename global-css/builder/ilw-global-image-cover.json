@@ -1,12 +1,16 @@
 {
-    "title": "Global Image Cover",
-    "tag": "ilw-global-image-cover",
-    "github": "https://github.com/web-illinois/toolkit-management/",
-    "type": "stylesheet",
-    "element-name": "div",
-    "description": "The Global WIGG Stylesheet contains styles to create an image that covers over the entire area of the parent element.",
-    "purpose": "Cover an entire element with an image.",
-    "toolkit-version": "3.0",
-    "production-version": "3.0",
-    "development-version": "3.0-beta"
+  "title": "Global Image Cover",
+  "id": "ilw-global-image-cover",
+  "type": "Stylesheet",
+  "repository-name": "toolkit-management",
+  "description": "Make an image fill its container while preserving its proportions and cropping overflow cleanly.",
+  "purpose": "Cover an entire element with an image.",
+  "customtemplates": [],
+  "versions": [
+    {
+      "name": "3.0",
+      "notes": "",
+      "template": "3.0"
+    }
+  ]
 }
