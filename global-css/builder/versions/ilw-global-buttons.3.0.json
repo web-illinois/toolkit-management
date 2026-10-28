@@ -63,7 +63,16 @@
         "ilw-button-large",
         "ilw-button-small"
       ]
-    }
+    },
+    {
+      "name": "alignment",
+      "description": "Alignment of buttons",
+      "depreciated": false,
+      "values": [
+        "",
+        "ilw-buttons-left"
+      ]
+    }    
   ],
   "css-variables": []
 }
