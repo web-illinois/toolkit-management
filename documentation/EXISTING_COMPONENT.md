@@ -6,7 +6,7 @@
 
 0. In [the toolkit project list](https://github.com/orgs/web-illinois/projects/7), assign the issue associated with the component to yourself. Move the project to *In Progress*. If you run into an error assigning an issue, contact jonker@illinois.edu to get access. 
 1. Fix the issue or make the [upgrades](https://github.com/web-illinois/toolkit-management/blob/main/documentation/UPGRADES.md) in your branch. If you need to have a non-developer look at the component, you can add it as an alpha or beta to the Toolkit Builder (see notes below).
-2. If you have multiple issues merge these into a version branch labeled with your planned release number. Don't use the same naming convention as the tag (vX.X.XX) or it will throw an error.
+2. If you have multiple issues on different branches to resolve, merge these into a single version branch named using the release number (X.X.XX). Don't use the same naming convention as the tag (vX.X.XX) or it will throw an error.
  
 ### Prepare your branch for the update
  
