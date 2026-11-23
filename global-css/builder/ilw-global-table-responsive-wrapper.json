@@ -1,0 +1,16 @@
+{
+  "title": "Global Table Styles (responsive wrapper)",
+  "id": "ilw-global-table-responsive-wrapper",
+  "type": "Stylesheet",
+  "repository-name": "toolkit-management",
+  "description": "Keep wide tables usable on small screens by placing them in a horizontally scrollable wrapper.",
+  "purpose": "Make a table scroll horizontally on mobile.",
+  "customtemplates": [],
+  "versions": [
+    {
+      "name": "3.0",
+      "notes": "",
+      "template": "3.0"
+    }
+  ]
+}

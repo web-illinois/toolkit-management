@@ -1,0 +1,43 @@
+name: component_deploy_development_latest
+on:
+  workflow_call:
+    inputs:
+      COMPONENT_NAME:
+        required: true
+        type: string
+    secrets:
+      TOOLKIT_AWS_ACCESS_SECRET:
+        required: true
+jobs:
+  build_test_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v4
+      - name: 'Create Component'
+        run: echo "COMPONENT_NAME=${COMPONENT_NAME}" >> $GITHUB_ENV
+        env:
+          COMPONENT_NAME: ${{inputs.COMPONENT_NAME}}
+      - name: Development run
+        run: echo "Running development deployment"
+
+      - run: npm install
+      - run: npm rebuild
+      - run: npm run-script build
+
+      # Run this to get the axe report
+      # This only uses Chrome, so it doesn't have to run the full Playwright install
+      - name: Run axe-core tests
+        run: npm run test:axe:github
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ vars.TOOLKIT_AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
+          aws-region: us-east-2
+
+      - name: Deploy toolbox to S3 bucket for latest dev
+        run: aws s3 sync ./dist/cdn/ s3://dev.toolkit.illinois.edu/content/$COMPONENT_NAME/latest --delete --acl bucket-owner-full-control
+      - name: Invalidate Cloudfront cache for latest dev
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.TOOLKIT_AWS_CLOUDFRONT_DEV }} --paths "/$COMPONENT_NAME/latest*"

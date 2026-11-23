@@ -1,0 +1,16 @@
+name: build_test
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@v4
+    - run: npm install
+    - run: npm rebuild
+    - run: npm run-script build

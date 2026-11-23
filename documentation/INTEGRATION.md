@@ -88,6 +88,23 @@ New components will **not** trigger a major release. Because of this, if you hav
 #### To publish: 
 ``` npm publish --access public ```
 
+### Security updates
+
+Note that you need to add a trusted publisher in NPM to enable the automatic publish. To do this, go to your NPM package and go to *Settings*.
+
+Under **Select your publisher**, Choose *GitHub Actions*
+
+Fill in the below. 
+
+<img width="785" height="880" alt="image" src="https://github.com/user-attachments/assets/5db93a85-fd45-4365-8205-f88a5f5ac2fe" />
+
+* Label: web-illinois
+* Organization or user: web-illinois
+* Repository: *repository name*
+* Worflow filename: deploy.yml
+* Environment name: *leave blank*
+* Allow NPM PUBLISH: *checked*
+
 Contact jonker@illinois.edu to be added to the NPM group.  More information about the integration plans is at the [Integration Documentation](https://github.com/web-illinois/toolkit-management/blob/main/documentation/INTEGRATION.md).
 
 

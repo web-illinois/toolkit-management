@@ -1,0 +1,10 @@
+:root {
+    --ilw-new-window--content: "";
+    --ilw-new-window--mask-image: url(https://cdn.brand.illinois.edu/icons/solid/blue/link.svg);
+    --ilw-new-window--display: inline-block;
+    --ilw-new-window--width: 0.72em;
+    --ilw-new-window--height: 0.72em;
+    --ilw-new-window--margin-left: 0.25em;
+    --ilw-new-window--background-color: currentColor;
+}
+

@@ -59,11 +59,11 @@ a.ilw-button, button.ilw-button, ul.ilw-buttons a, ul.ilw-buttons button {
 }
 
 a.ilw-button.ilw-theme-blue-1, button.ilw-button.ilw-theme-blue-1, ul.ilw-buttons a.ilw-theme-blue-1, ul.ilw-buttons button.ilw-theme-blue-1,
-a.ilw-button.ilw-theme-blue-1:visited, button.ilw-button.ilw-theme-blue-1:visited, ul.ilw-buttons a.ilw-theme-blue-1:visited, ul.ilw-buttons button.ilw-theme-blue-1:visited 
+a.ilw-button.ilw-theme-blue-1:visited, button.ilw-button.ilw-theme-blue-1:visited, ul.ilw-buttons a.ilw-theme-blue-1:visited, ul.ilw-buttons button.ilw-theme-blue-1:visited, 
 a.ilw-button.ilw-theme-orange-1, button.ilw-button.ilw-theme-orange-1, ul.ilw-buttons a.ilw-theme-orange-1, ul.ilw-buttons button.ilw-theme-orange-1,
 a.ilw-button.ilw-theme-orange-1:visited, button.ilw-button.ilw-theme-orange-1:visited, ul.ilw-buttons a.ilw-theme-orange-1:visited, ul.ilw-buttons button.ilw-theme-orange-1:visited,
 a.ilw-button.ilw-theme-blue-solid, button.ilw-button.ilw-theme-blue-solid, ul.ilw-buttons a.ilw-theme-blue-solid, ul.ilw-buttons button.ilw-theme-blue-solid,
-a.ilw-button.ilw-theme-blue-solid:visited, button.ilw-button.ilw-theme-blue-solid:visited, ul.ilw-buttons a.ilw-theme-blue-solid:visited, ul.ilw-buttons button.ilw-theme-blue-solid:visited 
+a.ilw-button.ilw-theme-blue-solid:visited, button.ilw-button.ilw-theme-blue-solid:visited, ul.ilw-buttons a.ilw-theme-blue-solid:visited, ul.ilw-buttons button.ilw-theme-blue-solid:visited, 
 a.ilw-button.ilw-theme-orange-solid, button.ilw-button.ilw-theme-orange-solid, ul.ilw-buttons a.ilw-theme-orange-solid, ul.ilw-buttons button.ilw-theme-orange-solid,
 a.ilw-button.ilw-theme-orange-solid:visited, button.ilw-button.ilw-theme-orange-solid:visited, ul.ilw-buttons a.ilw-theme-orange-solid:visited, ul.ilw-buttons button.ilw-theme-orange-solid:visited,
 a.ilw-button.ilw-theme-blue-1:hover, button.ilw-button.ilw-theme-blue-1:hover, ul.ilw-buttons a.ilw-theme-blue-1:hover, ul.ilw-buttons button.ilw-theme-blue-1:hover, 
@@ -118,4 +118,23 @@ a.ilw-button.ilw-button-small, button.ilw-button-small, ul.ilw-buttons.ilw-butto
             padding-right: 0;
         }
     }
+}
+
+a.ilw-button[target="_blank"]::after, .ilw-buttons a[target="_blank"]::after{
+  display: var(--ilw-new-window--display, inline-block);
+  content: var(--ilw-new-window--content, "");
+  mask-image: var(--ilw-new-window--mask-image, url(https://cdn.brand.illinois.edu/icons/solid/blue/link.svg));
+  margin-left:  var(--ilw-new-window--margin-left, 0);
+  position: relative;
+  width: var(--ilw-new-window--width, 1em);
+  height: var(--ilw-new-window--height, 1em);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: var(--ilw-new-window--background-color, currentColor);
 }

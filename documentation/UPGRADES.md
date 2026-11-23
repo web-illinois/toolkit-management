@@ -63,9 +63,26 @@ Fix remaining issues:
 
 ## axe-core tests
 
+
 1. Copy the `test-axe` folder, as well as `playwright.config.ts` and `playwright.ci.config.ts` from [ilw-filter](https://github.com/web-illinois/ilw-filter) to the project root.
 2. Create a `samples/variations.html` with a few sample components with unique IDs, but none of the configurable attributes. [See ilw-card/samples/variations.html](https://github.com/web-illinois/ilw-card/blob/main/samples/variations.html).
 3. Use `createVariations` at the bottom of the HTML file to create combinations of the configurable attributes automatically.
+```html
+<script type="module">
+
+4. Add the necessary devDependencies:
+   1. `"@illinois-toolkit/ilw-core": "^1.0.5",`
+   2. `"@axe-core/playwright": "^4.10.2",`
+   3. `"@playwright/test": "^1.54.1",`
+   4. `"playwright": "^1.54.1",`
+5. Add the test scripts:
+   1. `"test:axe": "playwright test",`
+   2. `"test:axe:github": "playwright test --config playwright.ci.config.ts",`
+6. Run `npm install` and `npx playwright install`
+7. Add the following to `.gitignore`:
+   1. `test-results/`
+   2. `playwright-report/`
+
 ```html
 <script type="module">
     import { createVariations } from "@illinois-toolkit/ilw-core"; //a utility function provided by the illinois toolkit
@@ -83,7 +100,7 @@ Fix remaining issues:
         tag: ["article", "div"],
       }, 
         ["plain-card","image-card","footer-card","icon-card"] //unique IDs
-    );
+    ]);
 </script>
 ```
 4. Add the necessary dependencies by running:
@@ -106,7 +123,6 @@ Fix remaining issues:
 test-results/
 playwright-report/
 ```
-
 
 
 ## Vitest
